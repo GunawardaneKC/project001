@@ -111,22 +111,6 @@ function CreateProduct() {
         setProduct({...product, [name]:value, subcategory: selectedSubcategory})
     }
 
-    // const handleChangeInput = e => {
-    //   const { name, value } = e.target;
-    
-    //   if (name === 'category') {
-    //     // Update subcategories when the category changes
-    //     const selectedCategory = categories.find((cat) => cat._id === value);
-    //     const defaultSubcategory = selectedCategory && selectedCategory.subcategory.length > 0 ? selectedCategory.subcategory[0] : '';
-        
-    //     setSubcategories(selectedCategory ? selectedCategory.subcategory : []);
-    //     setSelectedCategory(value);
-    //     setSelectedSubcategory(defaultSubcategory); // Set to the first subcategory by default
-    //   }
-    
-    //   setProduct({ ...product, [name]: value, subcategory: '' });
-    // };
-    
 
     const handleSubmit = async e =>{
         e.preventDefault()
