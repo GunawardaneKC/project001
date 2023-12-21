@@ -14,54 +14,48 @@ function Header() {
     const [cart] = state.userAPI.cart
     const [menu, setMenu] = useState(false)
 
-    const logoutUser = async () =>{
-        await axios.get('/user/logout')
+    // const logoutUser = async () =>{
+    //     await axios.get('/user/logout')
         
-        localStorage.removeItem('firstLogin')
+    //     localStorage.removeItem('firstLogin')
         
-        window.location.href = "/";
-    }
+    //     window.location.href = "/";
+    // }
 
-    const adminRouter = () =>{
-        return(
-            <>
-                <li><Link to="/create_product">Create Product</Link></li>
-                <li><Link to="/category">Categories</Link></li>
-                <li><Link to="/supportChat">Users</Link></li>
+    // const adminRouter = () =>{
+    //     return(
+    //         <>
+    //             <li><Link to="/create_product">Create Product</Link></li>
+    //             <li><Link to="/category">Categories</Link></li>
+    //             <li><Link to="/supportChat">Users</Link></li>
+
+    //             <li className='dashBoardColor'><Link to="/dashBoard">DashBoard</Link></li>
+    //             <style>{`
+    //                     .dashBoardColor:hover a {
+    //                         background-image: linear-gradient(to right, #1BDFDF, #056ED7, #47C6FD);
+    //                         -webkit-background-clip: text;
+    //                         -webkit-text-fill-color: transparent;
+    //                       }
+    //                 `}</style>
+
+    //         </>
+    //     )
+    // }
+
+    // const loggedRouter = () =>{
+    //     return(
+    //         <>
+    //             <li className='logOutRed'><Link to="/" onClick={logoutUser}>Logout</Link></li>
+    //             {/* <li><Link to="/pro">Profile</Link></li> */}
+    //             <style>{`
+    //                     .logOutRed:hover a {
+    //                     color: red;
+    //                     }
+    //                 `}</style>
  
-                {/* <li><Link to="/Emp">Employees</Link></li>
-                <li><Link to="/Repair">Repairs</Link></li>
-                <li><Link to="/allOrder">Orders</Link></li>
-                <li><Link to="/all-deliveries">Deliveries</Link></li>
-                <li><Link to="/addedwarranty">Warranties</Link></li> */}
-
-                <li className='dashBoardColor'><Link to="/dashBoard">DashBoard</Link></li>
-                <style>{`
-                        .dashBoardColor:hover a {
-                            background-image: linear-gradient(to right, #1BDFDF, #056ED7, #47C6FD);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                          }
-                    `}</style>
-
-            </>
-        )
-    }
-
-    const loggedRouter = () =>{
-        return(
-            <>
-                <li className='logOutRed'><Link to="/" onClick={logoutUser}>Logout</Link></li>
-                {/* <li><Link to="/pro">Profile</Link></li> */}
-                <style>{`
-                        .logOutRed:hover a {
-                        color: red;
-                        }
-                    `}</style>
- 
-            </>
-        )
-    }
+    //         </>
+    //     )
+    // }
 
     const UserRouter = () =>{
         return(
@@ -84,7 +78,7 @@ function Header() {
 
             <div className="logo pl-3">
                 <h1 className='happyTopicNav'>
-                    <Link to="/">{isAdmin ? 'Happy Admin' : 'Happy Mobile'}</Link>
+                    <Link to="/">{'Happy Mobile'}</Link>
                 </h1>
                 <style>{`
                         .happyTopicNav:hover a {
@@ -96,19 +90,16 @@ function Header() {
             </div>
 
             <ul style={styleMenu}>
-                <li><Link to="/">{isAdmin ? 'Products' : 'Shop'}</Link></li>
+                {/* <li><Link to="/">{'Shop'}</Link></li> */}
+                <li><Link to="/contactUs">Contact Us</Link></li>
 
-                <li><Link to="/cuswarranty">{isAdmin ? '' : 'Your Warranties'}</Link></li>
+                {/* {isAdmin && adminRouter()}
 
-                <li><Link to="/cusrepair">{isAdmin ? '' : 'Your Repairs'}</Link></li>
+                {isUser && UserRouter()} */}
 
-                {isAdmin && adminRouter()}
-
-                {isUser && UserRouter()}
-
-                {
+                {/* {
                     isLogged ? loggedRouter() : <li><Link to="/login">Login ✥ Register</Link></li>
-                }
+                } */}
 
                 <li onClick={() => setMenu(!menu)}>
                     <img src={Close} alt="" width="30" className="menu" />
@@ -116,7 +107,7 @@ function Header() {
 
             </ul>
 
-            {
+            {/* {
                 isAdmin ? '' 
                 :<div className="cart-icon">
                     <span>{cart.length}</span>
@@ -124,7 +115,7 @@ function Header() {
                         <img src={Cart} alt="" width="30" />
                     </Link>
                 </div>
-            }
+            } */}
             
         </header>
     )
