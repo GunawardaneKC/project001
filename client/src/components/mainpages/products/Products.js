@@ -12,7 +12,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
-
+import Snowfall from 'react-snowfall';
 
 import Image from '../../../images/iphone-15-op.jpg';
 import Add1 from '../../../images/sam.jfif'
@@ -59,8 +59,8 @@ function Products() {
 
     if(loading) return <div><Loading /></div>
     return (
-        <>
-            <section>
+        <> 
+            <section>  
                 <div className='p-5 flex flex-col gap-5'>
                <div className='rounded-2xl shadow-xl overflow-hidden'>
                 <Carousel autoPlay infiniteLoop interval={4000} transitionTime={1000} showThumbs={false}>
@@ -70,9 +70,9 @@ function Products() {
                          {idx === 0 && (
                         <div className='absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 text-white text-center'>
                             <div>
-                               <Typist className='mb-4 text-sm font-semibold sm:text-lg' cursor={{ show: false }}>
-                            Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
-                        </Typist>
+                               <Typist className='mb-4 text-sm font-semibold sm:text-lg' cursor={{ show: false }} avgTypingDelay={45}>
+                                Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
+                                </Typist>
                            <div className='flex justify-center space-x-4'>
                                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
                                     <FontAwesomeIcon icon={faFacebook} size="1x" className='text-blue-500 hover:text-blue-600 text-sm sm:text-lg'/>
@@ -119,7 +119,7 @@ function Products() {
                 ))}
             </motion.div>
             <LoadMore />
-            {products.length === 0 && <Loading />}
+            {products.length === 0 && <Loading />} <Snowfall snowflakeCount={100} />
         </>
     )
 }
