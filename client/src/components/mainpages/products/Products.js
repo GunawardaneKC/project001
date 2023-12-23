@@ -10,6 +10,8 @@ import {fadeIn} from '../../../variants';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Typist from 'react-typist';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
 import Image from '../../../images/iphone-15-op.jpg';
@@ -64,16 +66,26 @@ function Products() {
                     {images.map((image, idx) => (
                         <div key={idx} className='relative'>
                             <img src={image} alt={`slide ${idx}`} className='h-full w-full object-cover'/>
-                            {idx === 0 && (
-                               <div className='absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 text-white text-center'>
-                               <div>
-                            <Typist className='mb-4 text-lg font-semibold' cursor={{ show: false }}>
-                                Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
-                            </Typist>
-                           </div>
-
+                         {idx === 0 && (
+                        <div className='absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 text-white text-center'>
+                            <div>
+                                <Typist className='mb-4 text-lg font-semibold' cursor={{ show: false }}>
+                                    Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
+                                </Typist>
+                              <div className='flex justify-center space-x-4'>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
+                                    <FontAwesomeIcon icon={faFacebook} size="1x" className='text-white hover:text-blue-600'/>
+                                </a>
+                                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
+                                    <FontAwesomeIcon icon={faTiktok} size="1x" className='text-white hover:text-black'/>
+                                </a>
+                                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
+                                    <FontAwesomeIcon icon={faYoutube} size="1x" className='text-white hover:text-red-600'/>
+                                </a>
                             </div>
-                           )}
+                            </div>
+                        </div>
+                    )}
                         </div>
                     ))}
                 </Carousel>
