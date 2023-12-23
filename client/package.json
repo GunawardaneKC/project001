@@ -40,6 +40,8 @@
     "react-scroll": "^1.8.9",
     "react-scroll-to-top": "^3.0.0",
     "react-slick": "^0.29.0",
+    "react-snowfall": "^1.2.1",
+    "react-snowflakes": "^1.0.0",
     "react-type-animation": "^3.0.1",
     "react-typist": "^2.0.5",
     "slick-carousel": "^1.8.1",

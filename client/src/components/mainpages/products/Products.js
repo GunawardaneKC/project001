@@ -12,7 +12,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
-
+import Snowfall from 'react-snowfall';
 
 import Image from '../../../images/iphone-15-op.jpg';
 import Add1 from '../../../images/sam.jfif'
@@ -59,8 +59,8 @@ function Products() {
 
     if(loading) return <div><Loading /></div>
     return (
-        <>
-            <section>
+        <> 
+            <section>  
                 <div className='p-5 flex flex-col gap-5'>
                <div className='rounded-2xl shadow-xl overflow-hidden'>
                 <Carousel autoPlay infiniteLoop interval={4000} transitionTime={1000} showThumbs={false}>
@@ -119,7 +119,7 @@ function Products() {
                 ))}
             </motion.div>
             <LoadMore />
-            {products.length === 0 && <Loading />}
+            {products.length === 0 && <Loading />} <Snowfall snowflakeCount={100} />
         </>
     )
 }
