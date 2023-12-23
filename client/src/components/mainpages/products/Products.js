@@ -70,21 +70,21 @@ function Products() {
                          {idx === 0 && (
                         <div className='absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 text-white text-center'>
                             <div>
-                                <Typist className='mb-4 text-lg font-semibold' cursor={{ show: false }}>
-                                    Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
-                                </Typist>
+                               <Typist className='mb-4 text-sm font-semibold sm:text-lg' cursor={{ show: false }}>
+    Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
+</Typist>
                               <div className='flex justify-center space-x-4'>
                                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faFacebook} size="1x" className='text-blue-500 hover:text-blue-600'/>
+                                    <FontAwesomeIcon icon={faFacebook} size="1x" className='text-blue-500 hover:text-blue-600 text-sm sm:text-lg'/>
                                 </a>
                                 <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faTiktok} size="1x" className='text-white hover:text-black'/>
+                                    <FontAwesomeIcon icon={faTiktok} size="1x" className='text-white hover:text-black text-sm sm:text-lg'/>
                                 </a>
                                 <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faYoutube} size="1x" className='text-red-500 hover:text-red-600'/>
+                                    <FontAwesomeIcon icon={faYoutube} size="1x" className='text-red-500 hover:text-red-600 text-sm sm:text-lg'/>
                                 </a>
                             </div>
-                           <p className='text-3xl font-bold hover:text-gray-400 cursor-pointer'>ONETEL MOBILE SRI LANKA
+                           <p className='text-3xl font-bold hover:text-gray-400 cursor-pointer text-sm sm:text-lg'>ONETEL MOBILE SRI LANKA
                             
                            </p>
                        <div className='h-44 w-44 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-56'>
