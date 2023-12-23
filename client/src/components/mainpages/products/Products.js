@@ -5,19 +5,16 @@ import Loading from '../utils/loading/Loading';
 import axios from 'axios';
 import Filters from './Filters';
 import LoadMore from './LoadMore';
-import {FaTiktok, FaYoutube, FaFacebook} from 'react-icons/fa';
-import {TypeAnimation} from 'react-type-animation';
 import {motion} from 'framer-motion';
 import {fadeIn} from '../../../variants';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import Image from '../../../images/h.jpg';
 import Add1 from '../../../images/sam.jfif'
 import Add2 from '../../../images/airpod.jfif'
 import Add3 from '../../../images/watch.webp'
 import Add4 from '../../../images/bankpower.webp'
-import { Link } from 'react-scroll';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 
 function Products() {
     const state = useContext(GlobalState)
@@ -26,7 +23,6 @@ function Products() {
     const [token] = state.token
     const [callback, setCallback] = state.productsAPI.callback
     const [loading, setLoading] = useState(false)
-    const [isCheck, setIsCheck] = useState(false)
 
     const images = [Image, Add1, Add3]; 
 
@@ -58,55 +54,37 @@ function Products() {
 
     if(loading) return <div><Loading /></div>
     return (
-        
         <>
-             
-<section>
-    <div className='p-5 flex flex-col md:flex-row gap-5'>
-       <div className='h-82 w-full rounded-2xl shadow-xl overflow-hidden'>
-          <Carousel autoPlay infiniteLoop interval={4000} transitionTime={1000} showThumbs={false}>
-                    {images.map((image, idx) => (
-                        <div key={idx}>
-                            <img src={image} alt={`slide ${idx}`} className='w-full h-full object-cover'/>
-                        </div>
-                    ))}
-                </Carousel>
-        </div>
-       <div className='gap-6 flex flex-col md:flex-row md:justify-between mt-16'>
-    <div className='gap-6 flex flex-col'>
-        <div className='h-40 w-full md:w-72 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-110'>
-            <img src={Add1} alt='image' className='w-full h-full object-cover'/>
-        </div>
-        <div className='h-40 w-full md:w-72 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-110'>
-            <img src={Add2} alt='image' className='w-full h-full object-cover'/>
-        </div>
-    </div>
-    <div className='gap-6 flex flex-col'>
-        <div className='h-40 w-full md:w-72 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-110'>
-            <img src={Add3} alt='image' className='w-full h-full object-cover'/>
-        </div>
-        <div className='h-40 w-full md:w-72 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-110'>
-            <img src={Add4} alt='image' className='w-full h-full object-cover'/>
-        </div>
-    </div>
-</div>
-    </div>
-</section>
-        <Filters />
-
-        <motion.div variants={fadeIn('left', 0.6)} initial="hidden" whileInView={'show'} className="products" id='productsId1'>
-            {
-                products.map(product => {
-                    
-                    return ( <ProductItem key={product._id} product={product}
-                    isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
-                    )
-                })
-            } 
-        </motion.div>
-
-        <LoadMore />
-        {products.length === 0 && <Loading />}
+            <section>
+                <div className='p-5 flex flex-col gap-5'>
+                    <div className='rounded-2xl shadow-xl overflow-hidden'>
+                        <Carousel autoPlay infiniteLoop interval={4000} transitionTime={1000} showThumbs={false}>
+                            {images.map((image, idx) => (
+                                <div key={idx}>
+                                    <img src={image} alt={`slide ${idx}`} className='h-full w-full object-cover'/>
+                                </div>
+                            ))}
+                        </Carousel>
+                    </div>
+                    <div className='flex flex-col md:flex-row mt-3 gap-6'>
+                        {[Add1, Add2, Add3, Add4].map((add, idx) => (
+                            <div className='gap-6 flex flex-col' key={idx}>
+                                <div className='h-56 w-full rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-110'>
+                                    <img src={add} alt='image' className='w-full h-full object-cover'/>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <Filters />
+            <motion.div variants={fadeIn('left', 0.6)} initial="hidden" whileInView={'show'} className="products" id='productsId1'>
+                {products.map(product => (
+                    <ProductItem key={product._id} product={product} isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
+                ))}
+            </motion.div>
+            <LoadMore />
+            {products.length === 0 && <Loading />}
         </>
     )
 }
