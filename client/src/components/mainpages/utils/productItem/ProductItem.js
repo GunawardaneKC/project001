@@ -10,7 +10,27 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
                 <Card
                     hoverable
                     style={{ width: 240 }}
-                    cover={<img alt={product.title} src={product.images.url} />}
+                    cover={
+                        <div 
+                            style={{ 
+                                width: '100%', 
+                                height: '15rem', 
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}
+                        >
+                            <img 
+                                alt={product.title} 
+                                src={product.images.url} 
+                                style={{ 
+                                    maxWidth: '100%', 
+                                    maxHeight: '100%', 
+                                    objectFit: 'contain' 
+                                }}
+                            />
+                        </div>
+                    }
                 >
                     <Card.Meta title={product.title} description={`LKR ${product.price}`} />
                     <p className="text-gray-600">{product.description}</p>
