@@ -60,7 +60,7 @@ function Products() {
             <section>
                 <div className='p-5 flex flex-col gap-5'>
                <div className='rounded-2xl shadow-xl overflow-hidden'>
-                <Carousel autoPlay infiniteLoop interval={400000} transitionTime={1000000} showThumbs={false}>
+                <Carousel autoPlay infiniteLoop interval={4000} transitionTime={1000} showThumbs={false}>
                     {images.map((image, idx) => (
                         <div key={idx} className='relative'>
                             <img src={image} alt={`slide ${idx}`} className='h-full w-full object-cover'/>
