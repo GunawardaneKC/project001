@@ -9,8 +9,10 @@ import {motion} from 'framer-motion';
 import {fadeIn} from '../../../variants';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Typist from 'react-typist';
 
-import Image from '../../../images/h.jpg';
+
+import Image from '../../../images/iphone-15-op.jpg';
 import Add1 from '../../../images/sam.jfif'
 import Add2 from '../../../images/airpod.jfif'
 import Add3 from '../../../images/watch.webp'
@@ -57,15 +59,26 @@ function Products() {
         <>
             <section>
                 <div className='p-5 flex flex-col gap-5'>
-                    <div className='rounded-2xl shadow-xl overflow-hidden'>
-                        <Carousel autoPlay infiniteLoop interval={4000} transitionTime={1000} showThumbs={false}>
-                            {images.map((image, idx) => (
-                                <div key={idx}>
-                                    <img src={image} alt={`slide ${idx}`} className='h-full w-full object-cover'/>
-                                </div>
-                            ))}
-                        </Carousel>
-                    </div>
+               <div className='rounded-2xl shadow-xl overflow-hidden'>
+                <Carousel autoPlay infiniteLoop interval={400000} transitionTime={1000000} showThumbs={false}>
+                    {images.map((image, idx) => (
+                        <div key={idx} className='relative'>
+                            <img src={image} alt={`slide ${idx}`} className='h-full w-full object-cover'/>
+                            {idx === 0 && (
+                               <div className='absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 text-white text-center'>
+                               <div>
+                            <Typist className='mb-4 text-lg font-semibold' cursor={{ show: false }}>
+                                Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
+                            </Typist>
+                           </div>
+
+                            </div>
+                           )}
+                        </div>
+                    ))}
+                </Carousel>
+              </div>
+                  </div>
                    <p className='text-center text-black text-3xl font-extralight'> The best way to buy the products you love. </p>
                     <div className='flex flex-col md:flex-row mt-3 gap-6'>
                         {[Add1, Add2, Add3, Add4].map((add, idx) => (
@@ -76,8 +89,7 @@ function Products() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
+                       </section>
             <Filters />
             <motion.div variants={fadeIn('left', 0.6)} initial="hidden" whileInView={'show'} className="products" id='productsId1'>
                 {products.map(product => (
