@@ -24,9 +24,20 @@ function Loading() {
         //     </div>
         // </div>
         <div style={{textAlign: "center", marginTop: "50px"}}>
-                <img src={loadingIMG} alt='BlackCart' style={{display: "block", margin: "0 auto", width: "200px", height: "200px"}}/>
-                <h2 style={{fontSize: "3rem", marginTop: "30px", marginBottom: "10px"}}>Loading...</h2>
-                <p style={{fontSize: "1.5rem", color: "#999"}}>Wait until we process your request</p>
+            <img 
+                src={loadingIMG} 
+                alt='BlackCart' 
+                style={{
+                    display: "block", 
+                    margin: "0 auto", 
+                    width: "200px", 
+                    height: "200px",
+                    filter: "grayscale(100%)"
+                }}
+            />
+            <h2 style={{fontSize: "3rem", marginTop: "30px", marginBottom: "10px"}}>Loading...</h2>
+            <p style={{fontSize: "1.5rem", color: "#999"}}>Wait until we process your request</p>
+            <br></br>
         </div>
     )
 }
