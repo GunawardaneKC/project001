@@ -1,34 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { Card } from 'antd';
 import BtnRender from './BtnRender';
 
 function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
     return (
         <Link to={`/detail/${product._id}`}>
-        <div className="bg-white rounded-lg shadow-md ml-4 mr-4 p-6">
-            {/* {isAdmin && (
-                <input
-                    type="checkbox"
-                    className="form-checkbox h-5 w-5 text-purple-600"
-                    checked={product.checked}
-                    onChange={() => handleCheck(product._id)}
-                />
-            )} */}
-
-            <Link to={`/detail/${product._id}`}>    
-            <img src={product.images.url} alt="" className="mx-auto w-64 h-64 object-contain" />
-            </Link>
-
-            <div className="text-center mt-6">
-            <Link to={`/detail/${product._id}`}>
-                <h2 className="text-lg font-medium text-gray-900 mb-2" title={product.title}>
-                    {product.title}
-                </h2>
-                </Link>
-                <span className="font-bold text-purple-600 text-xl mb-4">LKR {product.price}</span>
+            <Card
+                hoverable
+                style={{ width: 240 }}
+                cover={<img alt={product.title} src={product.images.url} />}
+            >
+                <Card.Meta title={product.title} description={`LKR ${product.price}`} />
                 <p className="text-gray-600">{product.description}</p>
-            </div>
-        </div>
+            </Card>
         </Link>
     );
 }

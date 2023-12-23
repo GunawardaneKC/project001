@@ -10,9 +10,8 @@
 }
 
 body{
-  background-image: url(./images/site-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  
+  background-color: #ffffff;
 }
 
 code {
