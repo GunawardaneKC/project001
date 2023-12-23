@@ -6,6 +6,7 @@ import Cart from './cart/Cart';
 import NotFound from './utils/not_found/NotFound';
 import Categories from './categories/Categories';
 import CreateProduct from './createProduct/CreateProduct';
+import ContactUs from './ContactUs';
 
 import {GlobalState} from '../../GlobalState';
 
@@ -27,6 +28,7 @@ function Pages() {
             <Route path="/cart" exact element={<Cart/>} />
 
             <Route path="*" exact element={<NotFound/>} />
+            <Route path="/contactus" exact element={<ContactUs/>} />
 
         </Routes>
         

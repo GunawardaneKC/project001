@@ -91,7 +91,7 @@ function Header() {
 
             <ul style={styleMenu}>
                 {/* <li><Link to="/">{'Shop'}</Link></li> */}
-                <li><Link to="/contactUs">Contact Us</Link></li>
+                <li><Link to="/contactus">Contact Us</Link></li>
 
                 {/* {isAdmin && adminRouter()}
 
