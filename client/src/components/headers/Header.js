@@ -17,10 +17,10 @@ export default function Header() {
         </div>
 
         <div className='flex justify-between ml-auto space-x-5 md:space-x-10'>
-          <Link to='/' onClick={() => handleClick('/')} className={activePage === '/' ? 'text-blue-500 text-xl font-bold cursor-pointer' : 'text-white text-xl font-bold hover:text-gray-400 cursor-pointer'}>Home</Link>
-          <Link to='/p' onClick={() => handleClick('/p')} className={activePage === '/p' ? 'text-blue-500 text-xl font-bold cursor-pointer' : 'text-white text-xl font-bold hover:text-gray-400 cursor-pointer'}>All Products</Link>
-          <Link to='/contactus' onClick={() => handleClick('/contactus')} className={activePage === '/contactus' ? 'text-blue-500 text-xl font-bold cursor-pointer' : 'text-white text-xl font-bold hover:text-gray-400 cursor-pointer'}>Contact Us</Link>
-          <Link to='/aboutus' onClick={() => handleClick('/aboutus')} className={activePage === '/aboutus' ? 'text-blue-500 text-xl font-bold cursor-pointer' : 'text-white text-xl font-bold hover:text-gray-400 cursor-pointer'}>About Us</Link>
+          <Link to='/' onClick={() => handleClick('/')} className={activePage === '/' ? 'text-blue-500  cursor-pointer' : 'text-white  hover:text-gray-400 cursor-pointer'}>Home</Link>
+          <Link to='/p' onClick={() => handleClick('/p')} className={activePage === '/p' ? 'text-blue-500 cursor-pointer' : 'text-white  hover:text-gray-400 cursor-pointer'}>All Products</Link>
+          <Link to='/contactus' onClick={() => handleClick('/contactus')} className={activePage === '/contactus' ? 'text-blue-500  cursor-pointer' : 'text-white  hover:text-gray-400 cursor-pointer'}>Contact Us</Link>
+          <Link to='/aboutus' onClick={() => handleClick('/aboutus')} className={activePage === '/aboutus' ? 'text-blue-500 cursor-pointer' : 'text-white  hover:text-gray-400 cursor-pointer'}>About Us</Link>
           <a href='https://wa.me/94777123456' className='text-white text-xl font-bold hover:text-gray-400 cursor-pointer'>
             <i className="fab fa-whatsapp"></i> 0771234567
           </a>
