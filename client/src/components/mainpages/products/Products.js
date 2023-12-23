@@ -19,6 +19,7 @@ import Add1 from '../../../images/sam.jfif'
 import Add2 from '../../../images/airpod.jfif'
 import Add3 from '../../../images/watch.webp'
 import Add4 from '../../../images/bankpower.webp'
+import Logo from '../../../images/cropped-onetel-logo-final.png'
 
 function Products() {
     const state = useContext(GlobalState)
@@ -74,17 +75,26 @@ function Products() {
                                 </Typist>
                               <div className='flex justify-center space-x-4'>
                                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faFacebook} size="1x" className='text-white hover:text-blue-600'/>
+                                    <FontAwesomeIcon icon={faFacebook} size="1x" className='text-blue-500 hover:text-blue-600'/>
                                 </a>
                                 <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
                                     <FontAwesomeIcon icon={faTiktok} size="1x" className='text-white hover:text-black'/>
                                 </a>
                                 <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faYoutube} size="1x" className='text-white hover:text-red-600'/>
+                                    <FontAwesomeIcon icon={faYoutube} size="1x" className='text-red-500 hover:text-red-600'/>
                                 </a>
                             </div>
+                           <p className='text-3xl font-bold hover:text-gray-400 cursor-pointer'>ONETEL MOBILE SRI LANKA
+                            
+                           </p>
+                       <div className='h-44 w-44 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-56'>
+                            <img src={Logo} alt='logo'/>
+                        </div>          
+                           
                             </div>
+                          
                         </div>
+                        
                     )}
                         </div>
                     ))}
