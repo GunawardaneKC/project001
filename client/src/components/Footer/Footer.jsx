@@ -1,73 +1,123 @@
-import React from 'react';
-
-export default function footer() {
+import React from 'react'
+import './footer.css'
+import { FaLocationDot } from "react-icons/fa6";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+import { GiGearHammer } from "react-icons/gi";
+import { GrFacebook  ,GrYoutube} from "react-icons/gr";
+ import { BsInstagram } from "react-icons/bs";
+ import { FaTiktok } from "react-icons/fa";
+ import ScrollToTop from "react-scroll-to-top";
+ import Logo from '../../images/cropped-onetel-logo-final.png'
+ import { FaApple, FaHeadphones, FaMobileAlt , FaAndroid} from 'react-icons/fa';
+export default function Footer() {
   return (
-    <div className='bg-gray-200'>
-       <footer className='mt-14'>
-          <div className="p-10 bg-gray-800 text-gray-200">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-                <div className='mb-5'>
-                  <h4 className='text-2xl pb-4'>SHOP</h4>
-                  <p className='text-gray-500'>
-                    A123 Kandy Road <br />
-                    Gampaha, PB-222443 <br />
-                    Sri Lanka <br /><br />
-                    <strong>Phone: </strong>+94722222222 <br />
-                    <strong>Email: </strong>hppymobile@icloud.com <br />
-                  </p>
-                </div>
-                <div className='mb-5'>
-                  <h4 className='pb-4'>Useful Links</h4>
-                  <ul className='text-gray-500'>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Home</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> About us</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Services</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Terms of Services</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Privacy Policy</a></li>
-                  </ul>                
-                </div>
-                <div className='mb-5'>
-                <h4 className='pb-4'>Our Services</h4>
-                  <ul className='text-gray-500'>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Delivering</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Repairing</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Warranty</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Returning</a></li>
-                    <li className='pb-4'><i class="fa fa-chevron-right text-purple-700"></i><a href="pop" class="hover:text-yellow-500"> Refunding</a></li>
-                  </ul>     
-                </div>
-                <div className='mb-5'>
-                  <h4 className='pb-4'>Join Our Newsletter</h4>
-                  <p className='text-gray-500 pb-2'>Join 25,000+ others and never miss out on new tips, tutorials, and more</p>
-                  <form className='flex flex-row flex-wrap'>
-                    <input type="text" className='text-gray-500 w-2/3 p-2 focus:border-yellow-500' placeholder='email@example.com' />
-                    <button className='w-1/3 bg-purple-700 text-white hover:bg-red-700'>Subscribe</button>
-                  </form>
-                </div>
-              </div>
-            </div>
+    
+    <div>
+      <ScrollToTop smooth top={20} component={<div className="scroll-to-top-button">↑</div>}/>
+     <div className='bg-black   footerimg '>
+    
+       <div className='flex flex-col md:flex-row relative'>
+             <div className='ml-8 p-8 max-w-lg  text-white rounded-lg mt-8'>
+             <p className='font-extralight'>
+             Welcome to ONETEL MOBILE – your go-to for cutting-edge mobile tech! Dive into our curated collection of the latest smartphones, tablets, and accessories, designed to amplify your digital vibe. Our breezy website makes shopping a joy – discover top brands for the perfect mobile match. Stay chic and connected with sleek smartphones and premium accessories. ONETEL MOBILE is your ticket to the future of tech – where innovation meets ease, just a click away! 🚀</p>
+             </div>
+
+           
+        
+     <div className='text-3xl p-8 uppercase text-white'>
+        Visit Us
+       <div className='ml-5 mt-6'>
+         <span className='flex'><FaLocationDot className='text-red-500'/>
+         <p className='text-sm text-white font-extralight normal-case mt-2 ml-2'>No.135 New, කොළඹ - නුවර මාර්ගය, Ja-Ela 11350</p></span>
+       </div>
+
+       <div className='ml-5 mt-6'>
+         <span className='flex'><BiSolidPhoneCall className='text-green-500'/>
+         <p className='text-sm text-white font-extralight normal-case mt-2 ml-2'>077 011 0001</p></span>
+       </div>
+
+       <div className='ml-5 mt-6'>
+         <span className='flex'><MdEmail className='text-blue-500'/>
+         <p className='text-sm text-white font-extralight normal-case mt-2 ml-2'>onetel@gmail.com</p></span>
+       </div>  
+
+     
+     </div>
+
+
+
+
+     <div className='text-3xl p-8 uppercase text-white'>
+      Products
+      <div className='ml-5 mt-6'>
+        <span className='flex'>
+        <FaApple className='text-white' />
+         
+          <p className='text-sm text-white font-extralight normal-case mt-2 ml-2 italic'>Iphone</p>
+        </span>
+      </div>
+
+      <div className='ml-5 mt-2'>
+        <span className='flex'>
+          <FaHeadphones  />
+          <p className='text-sm text-white font-extralight normal-case mt-2 ml-2 italic'>Airpods</p>
+        </span>
+      </div>
+
+      <div className='ml-5 mt-2'>
+        <span className='flex'>
+        <FaMobileAlt  />
+          <p className='text-sm text-white font-extralight normal-case mt-2 ml-2 italic'>Accessories</p>
+        </span>
+      </div>
+
+      <div className='ml-5 mt-2'>
+        <span className='flex'>
+          < FaAndroid className='text-green-400' />
+          <p className='text-sm text-white font-extralight normal-case mt-2 ml-2 italic'>Android</p>
+        </span>
+      </div>
+      </div>
+      </div>
+
+      <div className='text-white text-center p-4 relative mt-32 flex justify-center'>
+          <div className='flex-col'>
+          <img src={Logo} alt="logo" className='w-44 h-44 ml-6'/>
+          <p className='text-4xl font-semibold uppercase'>Onetel Mobile</p>
           </div>
-          <div className='w-full bg-gray-900 text-gray-500 px-10'>
-            <div className='max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center'>
-              <div className='text-center'>
-                <div>
-                  Copyright <strong><span>Happy Mobile</span></strong>. All Rights Reserved
-                </div>
-                <div>
-                  Designed by <a href="https://web.facebook.com/imantha.oshadha.3" className='text-purple-700 hover:text-yellow-400'>An Undergraduate of SLIIT</a>
-                </div>
-              </div>
-              <div className='text-center text-xl text-white mb-2'>
-                <a href="123321" className='w-10 h-10 rounded-full bg-purple-500 hover:bg-blue-500 mx-1 inline-block pt-2'><i class="fa fa-twitter"></i></a>
-                <a href="123321" className='w-10 h-10 rounded-full bg-purple-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 mx-1 inline-block pt-2'><i class="fa fa-instagram"></i></a>
-                <a href="123321" className='w-10 h-10 rounded-full bg-purple-500 hover:bg-blue-700 mx-1 inline-block pt-2'><i class="fa fa-facebook"></i></a>
-                <a href="123321" className='w-10 h-10 rounded-full bg-purple-500 hover:bg-blue-400 mx-1 inline-block pt-2'><i class="fa fa-skype"></i></a>
-                <a href="123321" className='w-10 h-10 rounded-full bg-purple-500 hover:bg-blue-900 mx-1 inline-block pt-2'><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-       </footer>
+        
+        </div>
+
+<div class='items-center justify-center p-4 relative flex text-xl'>
+  <span class='ml-4 icon-container'>
+    <span class='text-blue-700'><a href="https://www.facebook.com/onetel" aria-label="Our Facebook page" target="_blank" rel="noopener noreferrer" class="block mb-1 cursor-pointer"><GrFacebook/></a></span>
+  </span>
+  <span class='ml-4 icon-container'>
+    <span class='text-red-600'><GrYoutube/></span>
+  </span>
+  <span class='ml-4 icon-container'>
+    <span class='text-pink-600'><BsInstagram/></span>
+  </span>
+  <span class='ml-4 icon-container'>
+    <span class='text-yellow-100'><FaTiktok/></span>
+  </span>
+</div>
+
+         <div className='text-white text-center ml-2 uppercase font-extralight relative hover:text-blue-500'>FOLLOW US.</div>
+      
+     </div>
+     
+     
+     <div>
+     
+       <div className='bg-black text-white text-center p-4'>
+         
+         <p className='text-sm'>© 2023 Onetel Mobile. All Rights Reserved.</p>
+         <p className='text-sm'>  Website Designed & Developed by <a href='https://gleits.com/' className='text-green-500'>Gleits</a></p>
+       
+           </div>
+     </div>
     </div>
   )
 }
