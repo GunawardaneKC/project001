@@ -66,6 +66,7 @@ function Products() {
                             ))}
                         </Carousel>
                     </div>
+                   <p className='text-center text-black text-3xl font-extralight'> The best way to buy the products you love. </p>
                     <div className='flex flex-col md:flex-row mt-3 gap-6'>
                         {[Add1, Add2, Add3, Add4].map((add, idx) => (
                             <div className='gap-6 flex flex-col' key={idx}>
