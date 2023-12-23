@@ -5,16 +5,18 @@ import BtnRender from './BtnRender';
 
 function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
     return (
-        <Link to={`/detail/${product._id}`}>
-            <Card
-                hoverable
-                style={{ width: 240 }}
-                cover={<img alt={product.title} src={product.images.url} />}
-            >
-                <Card.Meta title={product.title} description={`LKR ${product.price}`} />
-                <p className="text-gray-600">{product.description}</p>
-            </Card>
-        </Link>
+        <div className="m-4"> {/* Add margin around each product item */}
+            <Link to={`/detail/${product._id}`}>
+                <Card
+                    hoverable
+                    style={{ width: 240 }}
+                    cover={<img alt={product.title} src={product.images.url} />}
+                >
+                    <Card.Meta title={product.title} description={`LKR ${product.price}`} />
+                    <p className="text-gray-600">{product.description}</p>
+                </Card>
+            </Link>
+        </div>
     );
 }
 
