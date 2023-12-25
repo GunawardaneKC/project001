@@ -198,8 +198,8 @@ className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:
 </div>
 
 {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
-<div className="mx-6 py-10 text-center md:text-left">
-  <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div className="p-5 text-center md:text-left">
+  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
     {/* <!-- TW Elements section --> */}
     <div className="">
       <h6
@@ -221,53 +221,28 @@ className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:
       </p>
     </div>
     {/* <!-- Products section --> */}
-    <div className="">
-      <h6
-        className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-        Products
-      </h6>
-      <p className="mb-4">
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >Angular</a>
-      </p>
-      <p className="mb-4">
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >React</a>
-      </p>
-      <p className="mb-4">
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >Vue</a>
-      </p>
-      <p>
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >Laravel</a>
-      </p>
+     
+     
+     <div className="relative h-0 overflow-hidden flex" style={{ paddingBottom: '85%'}}>
+     <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.431000525384!2d79.88881867466355!3d7.075926192926856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f0c9380c0e03%3A0xa3932d4877d41e82!2sOnetel%20Mobile%20Branch%202!5e0!3m2!1sen!2slk!4v1703511729539!5m2!1sen!2slk" 
+  width="1000" 
+  height="600" 
+  style={{border:0}} 
+  allowFullScreen 
+  loading="lazy" 
+></iframe>
+
+    
+     
+
     </div>
+   
+   &nbsp;
     {/* <!-- Useful links section --> */}
-    <div className="">
-      <h6
-        className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-        Useful links
-      </h6>
-      <p className="mb-4">
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >Pricing</a>
-      </p>
-      <p className="mb-4">
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >Settings</a>
-      </p>
-      <p className="mb-4">
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >Orders</a>
-      </p>
-      <p>
-        <a className="text-neutral-600 dark:text-neutral-200"
-        >Help</a>
-      </p>
-    </div>
+   
     {/* <!-- Contact section --> */}
-    <div>
+    <div className=''>
       <h6
         className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
         Contact
