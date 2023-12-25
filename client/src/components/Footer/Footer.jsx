@@ -223,7 +223,7 @@ className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:
     {/* <!-- Products section --> */}
      
      
-     <div className="relative h-0 overflow-hidden flex" style={{ paddingBottom: '85%'}}>
+     <div className="relative h-0 overflow-hidden flex" style={{ paddingBottom: '75%'}}>
      <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.431000525384!2d79.88881867466355!3d7.075926192926856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f0c9380c0e03%3A0xa3932d4877d41e82!2sOnetel%20Mobile%20Branch%202!5e0!3m2!1sen!2slk!4v1703511729539!5m2!1sen!2slk" 
   width="1000" 
