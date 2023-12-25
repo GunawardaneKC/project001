@@ -242,7 +242,7 @@ className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:
     {/* <!-- Useful links section --> */}
    
     {/* <!-- Contact section --> */}
-    <div className=''>
+    <div className='ml-16'>
       <h6
         className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
         Contact
