@@ -199,7 +199,7 @@ className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:
 
 {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
 <div className="p-5 text-center md:text-left">
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
     {/* <!-- TW Elements section --> */}
     <div className="">
       <h6
@@ -238,7 +238,7 @@ className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:
 
     </div>
    
-   &nbsp;
+   
     {/* <!-- Useful links section --> */}
    
     {/* <!-- Contact section --> */}
