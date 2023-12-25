@@ -10,9 +10,9 @@ export default function Header() {
 
   return (
     <div>
-      <nav className='bg-black w-screen h-12 flex items-center px-5 md:px-10'>
+      <nav className='bg-black h-20 flex items-center px-5 md:px-10 w-full'>
         <div className='flex items-center'>
-          <img src={Logo} alt='logo' className='h-10 w-14'/>
+          <img src={Logo} alt='logo' className='h-16 w-18'/>
           <span className='text-white text-2xl font-bold ml-3'>OneTel</span>
         </div>
 

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {GlobalState} from '../../../GlobalState';
 import ProductItem from '../utils/productItem/ProductItem';
 import Loading from '../utils/loading/Loading';
@@ -13,6 +13,20 @@ import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Snowfall from 'react-snowfall';
+import { RxDotFilled } from 'react-icons/rx';
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import { FreeMode, Pagination } from "swiper/modules";
+
+import { RxArrowTopRight } from "react-icons/rx";
+import { ServiceData } from "./constants";
+
 
 import Image from '../../../images/iphone-15-op.jpg';
 import Add1 from '../../../images/sam.jfif'
@@ -57,69 +71,190 @@ function Products() {
         }
     }
 
+    const slides = [
+        {
+          url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
+        },
+    
+        {
+          url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
+        },
+      ];
+    
+      const [currentIndex, setCurrentIndex] = useState(0);
+    
+      const prevSlide = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+      };
+    
+      const nextSlide = () => {
+        const isLastSlide = currentIndex === slides.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+      };
+    
+      const goToSlide = (slideIndex) => {
+        setCurrentIndex(slideIndex);
+      };
+
+      const autoSlideInterval = 2500;
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, autoSlideInterval);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [currentIndex]);
+
     if(loading) return <div><Loading /></div>
     return (
         <> 
             <section>  
-                <div className='p-5 flex flex-col gap-5'>
-               <div className='rounded-2xl shadow-xl overflow-hidden'>
-                <Carousel autoPlay infiniteLoop interval={4000} transitionTime={1000} showThumbs={false}>
-                    {images.map((image, idx) => (
-                        <div key={idx} className='relative'>
-                            <img src={image} alt={`slide ${idx}`} className='h-full w-full object-cover'/>
-                         {idx === 0 && (
-                        <div className='absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 text-white text-center'>
-                            <div>
-                               <Typist className='mb-4 text-sm font-semibold sm:text-lg' cursor={{ show: false }} avgTypingDelay={45}>
-                                Explore the latest in mobile technology at our store! From sleek designs to cutting-edge features, we offer a curated selection of smartphones that blend style and performance seamlessly. Upgrade your mobile experience with us – where innovation meets elegance!
-                                </Typist>
-                           <div className='flex justify-center space-x-4'>
-                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faFacebook} size="1x" className='text-blue-500 hover:text-blue-600 text-sm sm:text-lg'/>
-                                </a>
-                                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faTiktok} size="1x" className='text-white hover:text-black text-sm sm:text-lg'/>
-                                </a>
-                                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-                                    <FontAwesomeIcon icon={faYoutube} size="1x" className='text-red-500 hover:text-red-600 text-sm sm:text-lg'/>
-                                </a>
-                            </div>
-                           <p className='text-3xl font-bold hover:text-gray-400 cursor-pointer text-sm sm:text-lg'>ONETEL MOBILE SRI LANKA
-                            
-                           </p>
-                       <div className='h-44 w-44 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-56'>
-                            <img src={Logo} alt='logo'/>
-                        </div>          
-                           
-                            </div>
-                          
-                        </div>
-                        
-                    )}
-                        </div>
+                {/* 1st  image slider */}
+                <div className='max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group'>
+                <div
+                    style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+                    className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                ></div>
+                {/* Left Arrow */}
+                <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <BsChevronCompactLeft onClick={prevSlide} size={30} />
+                </div>
+                {/* Right Arrow */}
+                <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <BsChevronCompactRight onClick={nextSlide} size={30} />
+                </div>
+                <div className='flex top-4 justify-center py-2'>
+                    {slides.map((slide, slideIndex) => (
+                    <div
+                        key={slideIndex}
+                        onClick={() => goToSlide(slideIndex)}
+                        className={`text-2xl cursor-pointer ${currentIndex === slideIndex ? 'text-black' : 'text-white'}`}
+                    >
+                        <RxDotFilled />
+                    </div>
                     ))}
-                </Carousel>
-              </div>
-                  </div>
-                   <p className='text-center text-black text-3xl font-extralight'> The best way to buy the products you love. </p>
-                    <div className='flex flex-col md:flex-row mt-3 gap-6'>
+                </div>
+                </div>
+
+
+                   <p className='text-center text-black text-3xl font-semibold mt-0'> The best way to buy the products you love. </p>
+                    <div className='flex flex-col md:flex-row mt-6 gap-6'>
                         {[Add1, Add2, Add3, Add4].map((add, idx) => (
                             <div className='gap-6 flex flex-col' key={idx}>
                                 <div className='h-56 w-full rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-110'>
-                                    <img src={add} alt='image' className='w-full h-full object-cover'/>
+                                    <img src={add} alt='image' className=' h-full object-cover'/>
                                 </div>
                             </div>
                         ))}
                     </div>
                        </section>
             <Filters />
-            <motion.div variants={fadeIn('left', 0.6)} initial="hidden" whileInView={'show'} className="products" id='productsId1'>
+            <motion.div variants={fadeIn('left', 0.6)} initial="hidden" whileInView={'show'} className=" products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8" id='productsId1'>
                 {products.map(product => (
                     <ProductItem key={product._id} product={product} isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
                 ))}
             </motion.div>
             <LoadMore />
             {products.length === 0 && <Loading />} <Snowfall snowflakeCount={100} />
+
+
+            <div className="flex items-center justify-center flex-col h-[500px] bg-[#c5c5c5]">
+      <Swiper
+        breakpoints={{
+          390: {
+            
+            slidesPerView: 1,
+            spaceBetween: -100,
+          },
+          490: {
+            
+            slidesPerView: 1,
+            spaceBetween: -200,
+          },
+          590: {
+            
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          760: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          960: {
+            slidesPerView: 1,
+            spaceBetween: -155,
+          },
+          1140: {
+            slidesPerView: 1,
+            spaceBetween: -355,
+          },
+          1300: {
+            slidesPerView: 2,
+            spaceBetween: 300,
+          },
+          1600: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          1740: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1900: {
+            slidesPerView: 2,
+            spaceBetween: -150,
+          },
+          2100: {
+            slidesPerView: 3,
+            spaceBetween: 350,
+          },
+          2390: {
+            slidesPerView: 4,
+            spaceBetween: 350,
+          },
+        }}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode, Pagination]}
+        className="max-w-[90%] lg:max-w-[96%]"
+      >
+        {ServiceData.map((item) => (
+          <SwiperSlide key={item.title}>
+            <div className="flex flex-col gap-6 mb-16 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[360px] lg:w-[660px] overflow-hidden cursor-pointer">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${item.backgroundImage})` }}
+              />
+              <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
+              <div className="relative flex flex-col gap-3">
+                <item.icon className="text-blue-600 group-hover:text-blue-400 w-[32px] h-[32px]" />
+                <h1 className=" text-red-700 font-extrabold text-xl lg:text-2xl">{item.title} </h1>
+                <p className="lg:text-[18px]">{item.content} </p>
+              </div>
+              <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+
         </>
     )
 }
