@@ -132,7 +132,7 @@ className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:
   </div>
   {/* <!-- Social network icons container --> */}
   <div className="flex justify-center">
-    <a className="mr-6 text-neutral-600 dark:text-neutral-200">
+    <a className="mr-6 text-neutral-600 dark:text-neutral-200" href='https://www.facebook.com/onetel.lk'>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-4 w-4"
