@@ -7,11 +7,7 @@ import Filters from './Filters';
 import LoadMore from './LoadMore';
 import {motion} from 'framer-motion';
 import {fadeIn} from '../../../variants';
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Typist from 'react-typist';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Snowfall from 'react-snowfall';
 import { RxDotFilled } from 'react-icons/rx';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
@@ -27,13 +23,11 @@ import { FreeMode, Pagination } from "swiper/modules";
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "./constants";
 
-
 import Image from '../../../images/iphone-15-op.jpg';
 import Add1 from '../../../images/sam.jfif'
 import Add2 from '../../../images/airpod.jfif'
 import Add3 from '../../../images/watch.webp'
 import Add4 from '../../../images/bankpower.webp'
-import Logo from '../../../images/cropped-onetel-logo-final.png'
 
 function Products() {
     const state = useContext(GlobalState)

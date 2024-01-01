@@ -19,7 +19,7 @@ function Filters() {
   };
 
   return (
-    <div className="mt-6 p-4 text-slate-900 rounded-2xl glass">
+    <div className="mt-6 p-4 text-slate-900 rounded-2xl bg-[#c5c5c5]">
 
       {/* Search Input */}
       <div className="flex justify-center mb-4">
