@@ -29,15 +29,19 @@ function DetailProduct() {
           </div>
           <div className="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0 text-black">
             <div className="mt-4">
-              <span className="text-2xl font-bold">LKR {detailProduct.price}</span>
+              <span className="text-2xl font-bold " style={{ color: 'blue' }}>Rs.{detailProduct.price}/=</span>
             </div>
             <div className="mt-4">
-              <p className="my-5 bg-gray-100 p-4 rounded-md">
-                {detailProduct.description}
-              </p>
-              <p className="my-5 bg-gray-100 p-4 rounded-md">
-                {detailProduct.content}
-              </p>
+              {detailProduct.description && (
+                <p className="my-5 bg-gray-100 p-4 rounded-md">
+                  {detailProduct.description}
+                </p>
+              )}
+              {detailProduct.content && (
+                <p className="my-5 bg-gray-100 p-4 rounded-md">
+                  {detailProduct.content}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -55,7 +59,6 @@ function DetailProduct() {
           )}
         </div>
       </div>
-    
     </>
   );
 }

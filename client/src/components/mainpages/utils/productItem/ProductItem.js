@@ -1,43 +1,61 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card } from 'antd';
-import BtnRender from './BtnRender';
 
-function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
-    return (
-        <div className="m-4"> {/* Add margin around each product item */}
-            <Link to={`/detail/${product._id}`}>
-                <Card
-                    hoverable
-                    style={{ width: 240 }}
-                    cover={
-                        <div 
-                            style={{ 
-                                width: '100%', 
-                                height: '15rem', 
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}
-                        >
-                            <img 
-                                alt={product.title} 
-                                src={product.images.url} 
-                                style={{ 
-                                    maxWidth: '100%', 
-                                    maxHeight: '100%', 
-                                    objectFit: 'contain' 
-                                }}
-                            />
-                        </div>
-                    }
-                >
-                    <Card.Meta title={product.title} description={`LKR ${product.price}`} />
-                    <p className="text-gray-600">{product.description}</p>
-                </Card>
-            </Link>
-        </div>
-    );
+function ProductItem({ product }) {
+  return (
+    <div className="m-4">
+      <Link to={`/detail/${product._id}`}>
+        <Card
+          hoverable
+          className="hover-card"
+          style={{ width: 240 }}
+          cover={
+            <div
+              className="hover-zoom"
+              style={{
+                width: '100%',
+                height: '15rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden', // Hide overflowing content to prevent unwanted scrollbars
+              }}
+            >
+              <img
+                alt={product.title}
+                src={product.images.url}
+                className="zoom-image"
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  objectFit: 'contain',
+                  transition: 'transform 0.8s ease-in-out', // Adjust the duration for a slower zoom
+                }}
+              />
+            </div>
+          }
+        >
+          <Card.Meta
+            className="text-center text-xl font-semibold"
+            title={product.title}
+            description={<span style={{ color: 'blue' }}>{`Rs.${product.price}/=`}</span>}
+          />
+          {product.description && (
+            <p className="text-red-500 font-bold mt-2 text-center h-7 bg-opacity-75">
+              {product.description}
+            </p>
+          )}
+          {product.stock && (
+            <p className="text-red-500 font-bold bg-slate-300 mt-2 text-center h-7 bg-opacity-75">
+              {product.stock}
+            </p>
+          )}
+        </Card>
+      </Link>
+    </div>
+  );
 }
 
 export default ProductItem;
+

@@ -8,6 +8,11 @@
     
 }
 
+.products-container {
+    max-width: 1300px; /* Adjust the max-width according to your design */
+    margin: 0 auto; /* Center the container */
+  }
+
 /* ----------- Product Item ----------------- */
 @import url("../utils/productItem/productItem.css");
 
@@ -70,3 +75,58 @@
     border: 1px solid #555;
     text-transform: capitalize;
 }
+
+@media (max-width: 1500px){
+    .products-container {
+        max-width: 1100px; /* Adjust the max-width according to your design */
+        margin: 0 auto; /* Center the container */
+      }
+  }
+
+    @media (max-width: 1200px){
+        .products-container {
+            max-width: 900px; /* Adjust the max-width according to your design */
+            margin: 0 auto; /* Center the container */
+        }
+    }
+
+    @media (max-width: 1000px){
+        .products-container {
+            max-width: 700px; /* Adjust the max-width according to your design */
+            margin: 0 auto; /* Center the container */
+        }
+    }
+
+    @media (max-width: 800px){
+        .products-container {
+            max-width: 600px; /* Adjust the max-width according to your design */
+            margin: 0 auto; /* Center the container */
+        }
+    }
+
+    @media (max-width: 768px){
+        .products-container {
+            max-width: 540px; /* Adjust the max-width according to your design */
+            margin: 0 auto; /* Center the container */
+        }
+    }
+
+    @media (max-width: 600px){
+        .products-container {
+            max-width: 240px; /* Adjust the max-width according to your design */
+            margin: 0 auto; /* Center the container */
+        }
+    }
+
+    @media (max-width: 400px){
+        .products-container {
+            max-width: 160px; /* Adjust the max-width according to your design */
+            margin: 0 auto; /* Center the container */
+        }
+    }
+   
+
+    
+
+    
+

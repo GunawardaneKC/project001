@@ -147,27 +147,34 @@ function Products() {
 
 
                    <p className='text-center text-black text-3xl font-semibold mt-0'> The best way to buy the products you love. </p>
-                    <div className='flex flex-col md:flex-row mt-6 gap-6'>
+                    <div className='flex flex-col md:flex-row mt-6 gap-6 justify-center'>
                         {[Add1, Add2, Add3, Add4].map((add, idx) => (
                             <div className='gap-6 flex flex-col' key={idx}>
                                 <div className='h-56 w-full rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-110'>
-                                    <img src={add} alt='image' className=' h-full object-cover'/>
+                                    <img src={add} alt='image' className=' h-full w-full object-cover'/>
                                 </div>
                             </div>
                         ))}
                     </div>
                        </section>
             <Filters />
-            <motion.div variants={fadeIn('left', 0.6)} initial="hidden" whileInView={'show'} className=" products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8" id='productsId1'>
+            <motion.div
+              variants={fadeIn('left', 0.3)}
+              initial="hidden"
+              whileInView={'show'}
+              className="products-container" // Add a container class
+              >
+              <div className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 xl:gap-16" id='productsId1'>
                 {products.map(product => (
-                    <ProductItem key={product._id} product={product} isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
+                  <ProductItem key={product._id} product={product} isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
                 ))}
+              </div>
             </motion.div>
             <LoadMore />
             {products.length === 0 && <Loading />} <Snowfall snowflakeCount={100} />
 
 
-            <div className="flex items-center justify-center flex-col h-[500px] bg-[#c5c5c5]">
+            <div className="flex items-center justify-center flex-col h-[500px] bg-gray-200">
       <Swiper
         breakpoints={{
           390: {
@@ -206,20 +213,20 @@ function Products() {
             spaceBetween: 50,
           },
           1740: {
-            slidesPerView: 2,
-            spaceBetween: 10,
+            slidesPerView: 3,
+            spaceBetween: 450,
           },
           1900: {
             slidesPerView: 2,
-            spaceBetween: -150,
+            spaceBetween: -250,
           },
           2100: {
             slidesPerView: 3,
-            spaceBetween: 350,
+            spaceBetween: 300,
           },
           2390: {
             slidesPerView: 4,
-            spaceBetween: 350,
+            spaceBetween: 300,
           },
         }}
         freeMode={true}

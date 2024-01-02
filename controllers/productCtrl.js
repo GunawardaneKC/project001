@@ -65,7 +65,7 @@ const productCtrl = {
     },
     createProduct: async(req, res) =>{
         try {
-            const {product_id, title, price, description, content, images, category, subcategory} = req.body;
+            const {product_id, title, price, description,stock, content, images, category, subcategory} = req.body;
             if(!images) return res.status(400).json({msg: "No image upload"})
 
             const product = await Products.findOne({product_id})
@@ -73,7 +73,7 @@ const productCtrl = {
                 return res.status(400).json({msg: "This product already exists."})
 
             const newProduct = new Products({
-                product_id, title: title.toLowerCase(), price, description, content, images, category, subcategory
+                product_id, title: title.toLowerCase(), price, description, stock, content, images, category, subcategory
             })
 
             await newProduct.save()
@@ -93,11 +93,11 @@ const productCtrl = {
     },
     updateProduct: async(req, res) =>{
         try {
-            const {title, price, description, content, images, category, subcategory} = req.body;
+            const {title, price, description, stock, content, images, category, subcategory} = req.body;
             if(!images) return res.status(400).json({msg: "No image upload"})
 
             await Products.findOneAndUpdate({_id: req.params.id}, {
-                title: title.toLowerCase(), price, description, content, images, category, subcategory
+                title: title.toLowerCase(), price, description, stock, content, images, category, subcategory
             })
 
             res.json({msg: "Updated a Product"})

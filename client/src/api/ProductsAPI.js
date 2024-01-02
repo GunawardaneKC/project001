@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
-
 function ProductsAPI() {
     const [products, setProducts] = useState([])
     const [callback, setCallback] = useState(false)
@@ -11,6 +10,7 @@ function ProductsAPI() {
     const [page, setPage] = useState(1)
     const [result, setResult] = useState(0)
     const [subcategory, setSubcategory] = useState('');
+
 
     useEffect(() => {
         const getProducts = async () => {
@@ -31,6 +31,7 @@ function ProductsAPI() {
         page: [page, setPage],
         result: [result, setResult],
         subcategory: [subcategory, setSubcategory],
+        
     }
 }
 
