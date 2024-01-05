@@ -49,7 +49,7 @@ app.use(postPro);
 // })
 
 // Connect to mongodb
-const DB_URL='mongodb+srv://happyitpvindya:happy123@itp.ftafmbd.mongodb.net/' 
+const DB_URL='mongodb+srv://onetel:onetel1234@cluster0.u25dn7z.mongodb.net/'
 mongoose.set('strictQuery', false);
 mongoose.set('strictQuery', true);
 
