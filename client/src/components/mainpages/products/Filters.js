@@ -140,7 +140,7 @@ function Filters() {
         <input
           type="text"
           value={search}
-          placeholder="Enter your search!"
+          placeholder="Search Here!"
           onChange={e => setSearch(e.target.value.toLowerCase())}
           className="border rounded-md px-2 py-1"
         />

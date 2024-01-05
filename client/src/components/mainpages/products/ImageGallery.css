@@ -1,0 +1,44 @@
+.gallery-container {
+    max-width: 1800px;
+    max-height: 400px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 0px;
+    position: relative;
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.8); 
+    z-index: 1; 
+  }
+  
+  .zoom {
+    position: fixed;
+    max-width: 100vw;
+    max-height: 100vh; 
+    z-index: -1;
+    display: none; 
+  }
+  
+  .gallery-item:hover .zoom {
+    display: block;
+  }
+  
+  
