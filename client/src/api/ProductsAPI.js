@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import axios from 'axios'
 
 function ProductsAPI() {
+  axios.defaults.baseURL = 'https://onetel-admin.onrender.com';
     const [products, setProducts] = useState([])
     const [callback, setCallback] = useState(false)
     const [category, setCategory] = useState('')

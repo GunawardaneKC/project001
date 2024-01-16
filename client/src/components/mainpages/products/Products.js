@@ -31,6 +31,7 @@ import Add3 from '../../../images/watch.webp'
 import Add4 from '../../../images/bankpower.webp'
 
 function Products() {
+  axios.defaults.baseURL = 'https://onetel-admin.onrender.com';
     const state = useContext(GlobalState)
     const [products, setProducts] = state.productsAPI.products
     const [isAdmin] = state.userAPI.isAdmin
