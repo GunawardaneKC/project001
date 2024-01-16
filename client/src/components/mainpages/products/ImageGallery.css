@@ -1,6 +1,6 @@
 .gallery-container {
-    max-width: 1800px;
-    max-height: 400px;
+    max-width: 2400px;
+    max-height: 600px;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
