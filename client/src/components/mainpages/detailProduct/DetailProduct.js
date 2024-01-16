@@ -25,7 +25,13 @@ function DetailProduct() {
     }
   }, [params.id, products]);
 
-  if (detailProduct.length === 0) return null;
+  if (!detailProduct) {
+    return null; // or any loading indicator you prefer
+  }
+
+  if (detailProduct.length === 0) {
+    return null; // or any loading indicator you prefer
+  }
 
   return (
     <>

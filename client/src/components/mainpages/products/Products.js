@@ -13,16 +13,16 @@ import { RxDotFilled } from 'react-icons/rx';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import Imagecontainer from './imagecontainer';
 
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
-import { FreeMode, Pagination } from "swiper/modules";
+// import { FreeMode, Pagination } from "swiper/modules";
 
-import { RxArrowTopRight } from "react-icons/rx";
-import { ServiceData } from "./constants";
+// import { RxArrowTopRight } from "react-icons/rx";
+// import { ServiceData } from "./constants";
 
 import Image from '../../../images/iphone-15-op.jpg';
 import Add1 from '../../../images/sam.jfif'
