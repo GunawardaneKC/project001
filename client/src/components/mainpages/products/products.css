@@ -127,7 +127,7 @@
 
     @media (max-width: 300px){
         .products-container {
-            max-width: 160px; /* Adjust the max-width according to your design */
+            max-width: 260px; /* Adjust the max-width according to your design */
             margin: 0 auto; /* Center the container */
         }         
     }
