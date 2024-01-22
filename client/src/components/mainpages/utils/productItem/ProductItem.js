@@ -112,7 +112,11 @@ function ProductItem({ product }) {
           <Card.Meta
             className="text-center text-xl font-semibold"
             title={product.title}
-            description={<span style={{ color: 'blue' }}>{`Rs.${product.price}/=`}</span>}
+            description={
+              <span style={{ color: 'blue' }}>
+                {`Rs.${Number(product.price).toLocaleString()}/=`}
+              </span>
+            }
           />
           {product.description && (
             <p className="text-red-500 font-bold mt-2 text-center h-7 bg-opacity-75">
