@@ -114,7 +114,7 @@ function ProductItem({ product }) {
             title={product.title}
             description={
               <span style={{ color: 'blue' }}>
-                {`Rs.${Number(product.price).toLocaleString()}/=`}
+                {`Rs: ${Number(product.price).toLocaleString()}/=`}
               </span>
             }
           />
