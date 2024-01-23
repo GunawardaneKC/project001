@@ -138,7 +138,7 @@ function Filters() {
     </div>
 
             {/* Radio buttons for condition */}
-            {category === 'Mobile Phones' && (
+            {category.name === 'Mobile Phones' && (
               <div className="flex items-center gap-5">
                 <span className="font-medium"></span>
                 <label style={{ display: 'flex', alignItems: 'center' }}>
