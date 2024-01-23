@@ -148,8 +148,8 @@ function Filters() {
       </div>
 
              {/* Radio buttons for condition */}
-       <div className="flex items-center gap-4">
-        <span className="font-medium">Condition: </span>
+       <div className="flex items-center gap-5">
+        <span className="font-medium"></span>
         <label>
           <input
             type="radio"
