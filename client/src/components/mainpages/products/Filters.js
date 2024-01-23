@@ -31,8 +31,7 @@ function Filters() {
 
   return (
     <div className="mt-10 ml-4 mr-4 flex flex-wrap justify-between rounded-3xl p-4 bg-gray-200 text-slate-900">
-  <div className="flex flex-wrap items-center gap-4 w-full">
-    <div className="flex items-center gap-4">
+    <div className="flex flex-wrap items-center gap-4">
       <span className="font-medium">Filters: </span>
       <select
         name="category"
@@ -64,52 +63,53 @@ function Filters() {
           ))}
         </select>
       )}
-    </div>
+      {/* Radio buttons for condition */}
+      <div className="flex items-center gap-5 mt-4">
+        <span className="font-medium">Condition: </span>
+        <label style={{ display: 'flex', alignItems: 'center' }}>
+          <input
+            type="radio"
+            value="brandNew"
+            checked={condition === 'Brand New'}
+            onChange={() => setCondition('Brand New')}
+            style={{ marginRight: '10px' }}
+          />
+          Brand New
+        </label>
+        <label style={{ display: 'flex', alignItems: 'center' }}>
+          <input
+            type="radio"
+            value="used"
+            checked={condition === 'Used'}
+            onChange={() => setCondition('Used')}
+            style={{ marginRight: '10px' }}
+          />
+          Used
+        </label>
+      </div>
+      </div>
 
-    <div className="flex items-center gap-4 mt-4 w-full">
-      <span className="font-medium">Condition: </span>
-      <label style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="flex items-center gap-4">
         <input
-          type="radio"
-          value="brandNew"
-          checked={condition === 'Brand New'}
-          onChange={() => setCondition('Brand New')}
-          style={{ marginRight: '10px' }}
+          type="text"
+          value={search}
+          placeholder="Search Here!"
+          onChange={e => setSearch(e.target.value.toLowerCase())}
+          className="border rounded-md px-2 py-1"
         />
-        Brand New
-      </label>
-      <label style={{ display: 'flex', alignItems: 'center' }}>
-        <input
-          type="radio"
-          value="used"
-          checked={condition === 'Used'}
-          onChange={() => setCondition('Used')}
-          style={{ marginRight: '10px' }}
-        />
-        Used
-      </label>
+      </div>
+
+        <div className="row sort">
+            <span className="font-medium">Sort By: </span>
+          <select value={sort} onChange={e => setSort(e.target.value)} className="border rounded-md px-2 py-1">
+
+                <option value=''>Newest</option>
+              <option value='sort=oldest'>Oldest</option>
+              <option value='sort=-price'>Price: Hight-Low</option>
+          </select>
+        </div> 
+        
     </div>
-  </div>
-
-  <div className="flex items-center gap-4 w-full">
-    <input
-      type="text"
-      value={search}
-      placeholder="Search Here!"
-      onChange={(e) => setSearch(e.target.value.toLowerCase())}
-      className="border rounded-md px-2 py-1"
-    />
-  </div>
-
-  <div className="row sort w-full">
-    <span className="font-medium">Sort By: </span>
-    <select value={sort} onChange={(e) => setSort(e.target.value)} className="border rounded-md px-2 py-1">
-      <option value=''>Newest</option>
-      <option value='sort=oldest'>Oldest</option>
-      <option value='sort=-price'>Price: High-Low</option>
-    </select>
-  </div>
-</div>
 
 
   );
