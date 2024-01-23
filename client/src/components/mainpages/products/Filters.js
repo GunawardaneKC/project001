@@ -102,7 +102,7 @@ function Filters() {
   // );
 
   return (
-    <div className="mt-10 ml-4 mr-4 flex flex-wrap justify-between rounded-2xl p-4 bg-gray-200 text-slate-900">
+    <div className="mt-10 ml-4 mr-4 flex flex-wrap justify-between rounded-3xl p-4 bg-gray-200 text-slate-900">
     <div className="flex flex-wrap items-center gap-4">
       <span className="font-medium">Filters: </span>
       <select
