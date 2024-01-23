@@ -27,6 +27,7 @@ function Filters() {
   const handleCategory = (e) => {
     const selectedCategory = e.target.value;
     setCategory(selectedCategory);
+    setCondition('');
   };
 
   return (
