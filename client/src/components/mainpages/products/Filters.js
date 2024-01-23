@@ -63,18 +63,6 @@ function Filters() {
           ))}
         </select>
       )}
-    </div>
-
-      <div className="flex items-center gap-4">
-        <input
-          type="text"
-          value={search}
-          placeholder="Search Here!"
-          onChange={e => setSearch(e.target.value.toLowerCase())}
-          className="border rounded-md px-2 py-1"
-        />
-      </div>
-
       {/* Radio buttons for condition */}
       <div className="flex items-center gap-5 mt-4">
         <span className="font-medium">Condition: </span>
@@ -99,16 +87,28 @@ function Filters() {
           Used
         </label>
       </div>
+      </div>
 
-              <div className="row sort">
-                 <span className="font-medium">Sort By: </span>
-                <select value={sort} onChange={e => setSort(e.target.value)} className="border rounded-md px-2 py-1">
+      <div className="flex items-center gap-4">
+        <input
+          type="text"
+          value={search}
+          placeholder="Search Here!"
+          onChange={e => setSearch(e.target.value.toLowerCase())}
+          className="border rounded-md px-2 py-1"
+        />
+      </div>
 
-                     <option value=''>Newest</option>
-                    <option value='sort=oldest'>Oldest</option>
-                    <option value='sort=-price'>Price: Hight-Low</option>
-                </select>
-             </div> 
+        <div className="row sort">
+            <span className="font-medium">Sort By: </span>
+          <select value={sort} onChange={e => setSort(e.target.value)} className="border rounded-md px-2 py-1">
+
+                <option value=''>Newest</option>
+              <option value='sort=oldest'>Oldest</option>
+              <option value='sort=-price'>Price: Hight-Low</option>
+          </select>
+        </div> 
+        
     </div>
 
 
