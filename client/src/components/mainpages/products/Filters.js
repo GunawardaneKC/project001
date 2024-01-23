@@ -65,30 +65,30 @@ function Filters() {
       )}
 
       {/* Radio buttons for condition */}
-      {categories === 'Mobile Phones' && (
-      <div className="flex items-center gap-5 mt-1">
-        <span className="font-medium">Condition:</span>
-        <label style={{ display: 'flex', alignItems: 'center' }}>
-          <input
-            type="radio"
-            value="brandNew"
-            checked={condition === 'Brand New'}
-            onChange={() => setCondition('Brand New')}
-            style={{ marginRight: '10px' }}
-          />
-          Brand New
-        </label>
-        <label style={{ display: 'flex', alignItems: 'center' }}>
-          <input
-            type="radio"
-            value="used"
-            checked={condition === 'Used'}
-            onChange={() => setCondition('Used')}
-            style={{ marginRight: '10px' }}
-          />
-          Used
-        </label>
-      </div>
+      {selectedCategory === 'Mobile Phones' && (
+        <div className="flex items-center gap-5 mt-1">
+          <span className="font-medium">Condition:</span>
+          <label style={{ display: 'flex', alignItems: 'center' }}>
+            <input
+              type="radio"
+              value="brandNew"
+              checked={condition === 'Brand New'}
+              onChange={() => setCondition('Brand New')}
+              style={{ marginRight: '10px' }}
+            />
+            Brand New
+          </label>
+          <label style={{ display: 'flex', alignItems: 'center' }}>
+            <input
+              type="radio"
+              value="used"
+              checked={condition === 'Used'}
+              onChange={() => setCondition('Used')}
+              style={{ marginRight: '10px' }}
+            />
+            Used
+          </label>
+        </div>
       )}
     </div>
 
