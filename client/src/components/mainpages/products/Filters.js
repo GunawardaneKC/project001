@@ -63,10 +63,10 @@ function Filters() {
           ))}
         </select>
       )}
-      </div>
+
       {/* Radio buttons for condition */}
       <div className="flex items-center gap-5 mt-2">
-        <span className="font-medium"></span>
+        <span className="font-medium">Condition: </span>
         <label style={{ display: 'flex', alignItems: 'center' }}>
           <input
             type="radio"
@@ -88,6 +88,7 @@ function Filters() {
           Used
         </label>
       </div>
+    </div>
 
       <div className="flex items-center gap-4">
         <input
@@ -99,16 +100,15 @@ function Filters() {
         />
       </div>
 
-        <div className="row sort">
-            <span className="font-medium">Sort By: </span>
-          <select value={sort} onChange={e => setSort(e.target.value)} className="border rounded-md px-2 py-1">
+              <div className="row sort mt-2">
+                 <span className="font-medium">Sort By: </span>
+                <select value={sort} onChange={e => setSort(e.target.value)} className="border rounded-md px-2 py-1">
 
-                <option value=''>Newest</option>
-              <option value='sort=oldest'>Oldest</option>
-              <option value='sort=-price'>Price: Hight-Low</option>
-          </select>
-        </div> 
-        
+                     <option value=''>Newest</option>
+                    <option value='sort=oldest'>Oldest</option>
+                    <option value='sort=-price'>Price: Hight-Low</option>
+                </select>
+             </div> 
     </div>
 
 
