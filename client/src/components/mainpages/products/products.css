@@ -10,7 +10,9 @@
 
 .products-container {
     max-width: 1300px; /* Adjust the max-width according to your design */
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto 20px; /* Center the container with space at the bottom */
+    padding: 0 20px;
+     /* Center the container */
   }
 
 /* ----------- Product Item ----------------- */
