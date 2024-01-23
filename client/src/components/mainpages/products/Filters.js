@@ -63,6 +63,7 @@ function Filters() {
           ))}
         </select>
       )}
+      </div>
       {/* Radio buttons for condition */}
       <div className="flex items-center gap-5 mt-4">
         <span className="font-medium"></span>
@@ -86,7 +87,6 @@ function Filters() {
           />
           Used
         </label>
-      </div>
       </div>
 
       <div className="flex items-center gap-4">
