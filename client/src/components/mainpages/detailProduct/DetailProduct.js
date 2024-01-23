@@ -45,7 +45,7 @@ function DetailProduct() {
               <span className="text-2xl font-bold " style={{ color: 'black' }}>{detailProduct.title}</span>
             </div>
             <div className="mt-4">
-              <span className="text-2xl font-bold " style={{ color: 'blue' }}>Rs.{detailProduct.price}/=</span>
+              <span className="text-2xl font-bold " style={{ color: 'blue' }}>{`Rs: ${Number(product.price).toLocaleString()}/=`}</span>
             </div>
             <div className="mt-4">
               {detailProduct.description && (
