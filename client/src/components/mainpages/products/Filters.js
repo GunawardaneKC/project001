@@ -65,7 +65,7 @@ function Filters() {
       )}
 
       {/* Radio buttons for condition */}
-      {categories.name === 'Mobile Phones' && (
+      {categories === 'Mobile Phones' && (
       <div className="flex items-center gap-5 mt-1">
         <span className="font-medium">Condition:</span>
         <label style={{ display: 'flex', alignItems: 'center' }}>
