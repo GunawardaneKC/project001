@@ -65,7 +65,7 @@ function Filters() {
       )}
       {/* Radio buttons for condition */}
       <div className="flex items-center gap-5 mt-4">
-        <span className="font-medium">Condition: </span>
+        <span className="font-medium"></span>
         <label style={{ display: 'flex', alignItems: 'center' }}>
           <input
             type="radio"
