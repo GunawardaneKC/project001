@@ -137,18 +137,8 @@ function Filters() {
       )}
     </div>
 
-      <div className="flex items-center gap-4">
-        <input
-          type="text"
-          value={search}
-          placeholder="Search Here!"
-          onChange={e => setSearch(e.target.value.toLowerCase())}
-          className="border rounded-md px-2 py-1"
-        />
-      </div>
-
-             {/* Radio buttons for condition */}
-      <div className="flex items-center gap-5">
+            {/* Radio buttons for condition */}
+            <div className="flex items-center gap-5">
         <span className="font-medium"></span>
         <label style={{ display: 'flex', alignItems: 'center' }}>
           <input
@@ -170,6 +160,16 @@ function Filters() {
           />
           Used
         </label>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <input
+          type="text"
+          value={search}
+          placeholder="Search Here!"
+          onChange={e => setSearch(e.target.value.toLowerCase())}
+          className="border rounded-md px-2 py-1"
+        />
       </div>
 
               <div className="row sort">
