@@ -29,78 +29,6 @@ function Filters() {
     setCategory(selectedCategory);
   };
 
-  // return (
-  //   <div className="mt-6 p-4 text-slate-900 rounded-2xl bg-[#c5c5c5]">
-
-  //     {/* Search Input */}
-  //     <div className="flex justify-center mb-4">
-  //       <input
-  //         type="text"
-  //         value={search}
-  //         placeholder="Search here"
-  //         onChange={(e) => setSearch(e.target.value.toLowerCase())}
-  //         className="border rounded-md px-3 py-1 w-full text-center"
-  //       />
-  //     </div>
-
-  //     {/* Filter Section */}
-  //     <div className="flex flex-col md:flex-row">
-  //       <div className="font-medium">Filter by:</div>
-
-  //       {/* Category Dropdown */}
-  //       <select
-  //         name="category"
-  //         value={category}
-  //         onChange={handleCategory}
-  //         className="border rounded-md px-2 py-1 mb-2 md:mb-0 md:mr-2 w-full md:w-44"
-  //       >
-  //         <option value="">All Products</option>
-  //         {categories.map((category) => (
-  //           <option value={category._id} key={category._id}>
-  //             {category.name}
-  //           </option>
-  //         ))}
-  //       </select>
-
-  //       {/* Subcategory Section */}
-  //       {category !== "" && (
-  //         <select
-  //           name="subcategory"
-  //           value={subcategory}
-  //           onChange={(e) => setSubcategory(e.target.value)}
-  //           className="border rounded-md px-2 py-1 mb-2 md:mb-0 md:mr-2 w-full md:w-44"
-  //         >
-  //           <option value="">All Subcategories</option>
-  //           {subcategories.map((subcat) => (
-  //             <option value={subcat} key={subcat}>
-  //               {subcat}
-  //             </option>
-  //           ))}
-  //         </select>
-  //       )}
-    
-
-  //       {/* Sort Section */}
-  //       <div className="flex flex-col md:flex-row ml-auto w">
-  //         <span className="font-medium mb-2 md:mb-0 md:mr-2">Sort By:</span>
-  //         <select
-  //           value={sort}
-  //           onChange={(e) => setSort(e.target.value)}
-  //           className="border rounded-md px-2 py-1 w-full md:w-44"
-  //         >
-  //           <option value="">Newest</option>
-  //           <option value="sort=oldest">Oldest</option>
-  //           <option value="sort=-price">Price: High-Low</option>
-
-  //         </select>
-  //       </div>
-
-          
-
-  //     </div>
-  //   </div>
-  // );
-
   return (
     <div className="mt-10 ml-4 mr-4 flex flex-wrap justify-between rounded-3xl p-4 bg-gray-200 text-slate-900">
     <div className="flex flex-wrap items-center gap-4">
@@ -138,29 +66,31 @@ function Filters() {
     </div>
 
             {/* Radio buttons for condition */}
-            <div className="flex items-center gap-5">
-            <span className="font-medium"></span>
-            <label style={{ display: 'flex', alignItems: 'center' }}>
-              <input
-                type="radio"
-                value="brandNew"
-                checked={condition === 'Brand New'}
-                onChange={() => setCondition('Brand New')}
-                style={{ marginRight: '10px' }}
-              />
-              Brand New
-            </label>
-            <label style={{ display: 'flex', alignItems: 'center' }}>
-              <input
-                type="radio"
-                value="used"
-                checked={condition === 'Used'}
-                onChange={() => setCondition('Used')}
-                style={{ marginRight: '10px' }}
-              />
-              Used
-            </label>
-          </div>
+            {category === 'Mobile Phones' && (
+              <div className="flex items-center gap-5">
+                <span className="font-medium">Condition: </span>
+                <label style={{ display: 'flex', alignItems: 'center' }}>
+                  <input
+                    type="radio"
+                    value="brandNew"
+                    checked={condition === 'Brand New'}
+                    onChange={() => setCondition('Brand New')}
+                    style={{ marginRight: '10px' }}
+                  />
+                  Brand New
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center' }}>
+                  <input
+                    type="radio"
+                    value="used"
+                    checked={condition === 'Used'}
+                    onChange={() => setCondition('Used')}
+                    style={{ marginRight: '10px' }}
+                  />
+                  Used
+                </label>
+              </div>
+             )}
 
       <div className="flex items-center gap-4">
         <input
