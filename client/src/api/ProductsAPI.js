@@ -11,7 +11,7 @@ function ProductsAPI() {
     const [page, setPage] = useState(1)
     const [result, setResult] = useState(0)
     const [subcategory, setSubcategory] = useState('');
-    const [condition, setCondition] = useState('');
+    const [condition, setCondition] = useState('Brand New');
 
 
     useEffect(() => {
