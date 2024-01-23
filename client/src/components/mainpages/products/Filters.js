@@ -152,7 +152,7 @@ function Filters() {
       )} */}
 
 <FormControl>
-      <FormLabel id="demo-customized-radios">Condition:</FormLabel>
+      {/* <FormLabel id="demo-customized-radios">Condition:</FormLabel> */}
       <RadioGroup
         defaultValue="female"
         aria-labelledby="demo-customized-radios"
@@ -174,7 +174,7 @@ function Filters() {
         />
       </div>
 
-              <div className="row sort mt-1">
+              <div className="row sort mt-4">
                  <span className="font-medium">Sort By: </span>
                 <select value={sort} onChange={e => setSort(e.target.value)} className="border rounded-md px-2 py-1">
 
