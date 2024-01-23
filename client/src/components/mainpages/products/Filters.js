@@ -65,8 +65,9 @@ function Filters() {
       )}
 
       {/* Radio buttons for condition */}
-      <div className="flex items-center gap-5 mt-2">
-        <span className="font-medium">Condition: </span>
+      {categories.name === 'Mobile Phones' && (
+      <div className="flex items-center gap-5 mt-1">
+        <span className="font-medium">Condition:</span>
         <label style={{ display: 'flex', alignItems: 'center' }}>
           <input
             type="radio"
@@ -88,6 +89,7 @@ function Filters() {
           Used
         </label>
       </div>
+      )}
     </div>
 
       <div className="flex items-center gap-4">
@@ -100,7 +102,7 @@ function Filters() {
         />
       </div>
 
-              <div className="row sort mt-2">
+              <div className="row sort mt-1">
                  <span className="font-medium">Sort By: </span>
                 <select value={sort} onChange={e => setSort(e.target.value)} className="border rounded-md px-2 py-1">
 
