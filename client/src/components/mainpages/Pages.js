@@ -7,7 +7,7 @@ import NotFound from './utils/not_found/NotFound';
 import Categories from './categories/Categories';
 // import CreateProduct from './createProduct/CreateProduct';
 import {GlobalState} from '../../GlobalState';
-import Maintain from './maintain/MaintenanceMessage';
+import Maintain from './maintain';
 
 function Pages() {
     const state = useContext(GlobalState)
