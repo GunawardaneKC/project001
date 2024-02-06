@@ -7,6 +7,7 @@ import NotFound from './utils/not_found/NotFound';
 import Categories from './categories/Categories';
 // import CreateProduct from './createProduct/CreateProduct';
 import {GlobalState} from '../../GlobalState';
+import Maintain from './maintain/MaintenanceMessage';
 
 function Pages() {
     const state = useContext(GlobalState)
@@ -16,7 +17,7 @@ function Pages() {
 
     return (
         <Routes>
-            <Route path="/" element={<Products/>} />
+            <Route path="/" element={<Maintain/>} />
             <Route path="/detail/:id" element={<DetailProduct/>} />
 
             <Route path="/category" exact element={isAdmin ? <Categories/> : <NotFound/>} />
