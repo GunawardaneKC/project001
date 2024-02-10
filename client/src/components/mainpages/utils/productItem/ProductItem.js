@@ -96,13 +96,6 @@ function ProductItem({ product }) {
                 overflow: 'hidden',
               }}
             >
-
-        {product.discountprice && (
-          <p className="text-red-500 font-bold mt-2 text-center h-7 bg-opacity-75">
-            {product.discountprice}
-          </p>
-        )} 
-
               <img
                 alt={product.title}
                 src={product.images.url}
@@ -126,6 +119,13 @@ function ProductItem({ product }) {
               </span>
             }
           />
+
+        {product.discountprice && (
+          <p className="text-red-500 font-bold mt-2 text-center h-7 bg-opacity-75">
+            {product.discountprice}
+          </p>
+        )} 
+
           {product.description && (
             <p className="text-red-500 font-bold mt-2 text-center h-7 bg-opacity-75">
               {product.description}
