@@ -18,6 +18,7 @@ function Pages() {
     return (
         <Routes>
             <Route path="/" element={<Maintain/>} />
+            <Route path="/products" element={<Products/>} />
             <Route path="/detail/:id" element={<DetailProduct/>} />
 
             <Route path="/category" exact element={isAdmin ? <Categories/> : <NotFound/>} />
