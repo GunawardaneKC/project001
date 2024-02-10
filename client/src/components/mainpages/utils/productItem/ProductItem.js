@@ -3,6 +3,27 @@ import { Link } from 'react-router-dom';
 import { Card } from 'antd';
 
 function ProductItem({ product }) {
+
+  // Internal CSS for the discount ribbon
+  const discountRibbonStyles = {
+    discountRibbon: {
+      position: 'absolute',
+      top: '30px',
+      right: '-6px',
+      backgroundColor: '#ff9800', // Yellow color
+      padding: '5px 10px',
+      transform: 'rotate(40deg)',
+      borderRadius: '5px', // Rounded corners
+   
+    },
+    ribbonText: {
+      color: 'white',
+      fontWeight: 'bold',
+      fontSize: '16px',
+    }
+  };
+  
+
   return (
     <div className="m-4">
       <Link to={`/detail/${product._id}`}>
@@ -47,9 +68,11 @@ function ProductItem({ product }) {
           />
 
           {product.discountprice && (
-            <p className="absolute top-0 right-0 px-2 py-1 bg-yellow-500 text-white font-bold rounded-bl-lg">
-              {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
-            </p>
+            <div style={discountRibbonStyles.discountRibbon}>
+              <p style={discountRibbonStyles.ribbonText}>
+                {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
+              </p>
+            </div>
           )}
 
           {product.description && (
