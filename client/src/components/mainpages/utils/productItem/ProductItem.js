@@ -14,7 +14,8 @@ function ProductItem({ product }) {
       padding: '3px 10px',
       transform: 'rotate(40deg)',
       borderRadius: '5px',
-      width: '200px', 
+      width: '200px',
+      textAlign: 'center', 
 
     },
 
@@ -55,7 +56,15 @@ function ProductItem({ product }) {
                   objectFit: 'cover',
                   transition: 'transform 0.8s ease-in-out',
                 }}
-              />
+              >
+                {product.discountprice && (
+            <div style={discountRibbonStyles.discountRibbon}>
+              <p style={discountRibbonStyles.ribbonText}>
+                {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
+              </p>
+            </div>
+          )}
+                </img>
             </div>
           }
         >
@@ -69,13 +78,7 @@ function ProductItem({ product }) {
             }
           />
 
-          {product.discountprice && (
-            <div style={discountRibbonStyles.discountRibbon}>
-              <p style={discountRibbonStyles.ribbonText}>
-                {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
-              </p>
-            </div>
-          )}
+          
 
           {product.description && (
             <p className="text-red-500 font-bold mt-2 text-center h-7 bg-opacity-75">
