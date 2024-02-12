@@ -166,7 +166,7 @@ function Products() {
               whileInView={'show'}
               className="products-container" // Add a container class
               >
-              <div className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-16" id='productsId1'>
+              <div className="products mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-16" id='productsId1'>
                 {products.map(product => (
                   <ProductItem key={product._id} product={product} isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
                 ))}
