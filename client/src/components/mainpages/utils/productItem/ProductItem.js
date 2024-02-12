@@ -49,7 +49,7 @@ function ProductItem({ product }) {
       <img
         alt={product.title}
         src={product.images.url}
-        className="zoom-image"
+        className=""
         style={{
           width: '100%',
           height: '100%',
