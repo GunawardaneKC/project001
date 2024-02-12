@@ -30,44 +30,44 @@ function ProductItem({ product }) {
   return (
     <div className="m-4">
       <Link to={`/detail/${product._id}`}>
-        <Card
-          hoverable
-          className="hover-card relative" // Added relative class for positioning of discount price
-          style={{ width: 240 }}
-          cover={
-            <div
-              className="hover-zoom"
-              style={{
-                width: '100%',
-                height: '15rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                overflow: 'hidden',
-              }}
-            >
-              <img
-                alt={product.title}
-                src={product.images.url}
-                className="zoom-image"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  transition: 'transform 0.8s ease-in-out',
-                }}
-              />
+      <Card
+  hoverable
+  className="hover-card" 
+  style={{ width: 240 }}
+  cover={
+    <div
+      className="hover-zoom relative" // Added relative class for positioning of discount price
+      style={{
+        width: '100%',
+        height: '15rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+      }}
+    >
+      <img
+        alt={product.title}
+        src={product.images.url}
+        className="zoom-image"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transition: 'transform 0.8s ease-in-out',
+        }}
+      />
 
-            {product.discountprice && (
-            <div style={discountRibbonStyles.discountRibbon}>
-              <p style={discountRibbonStyles.ribbonText}>
-                {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
-              </p>
-            </div>
-          )}
-            </div>
-          }
-        >
+      {product.discountprice && (
+        <div style={discountRibbonStyles.discountRibbon}>
+          <p style={discountRibbonStyles.ribbonText}>
+            {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
+          </p>
+        </div>
+      )}
+    </div>
+  }
+>
           <Card.Meta
             className="text-center text-xl font-semibold"
             title={product.title}
