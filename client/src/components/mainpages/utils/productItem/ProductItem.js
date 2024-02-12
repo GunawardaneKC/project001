@@ -8,13 +8,13 @@ function ProductItem({ product }) {
   const discountRibbonStyles = {
     discountRibbon: {
       position: 'absolute',
-      top: '2px',
-      right: '-32px',
+      top: '27px',
+      right: '-38px',
       backgroundColor: '#ff9800', // Yellow color
       padding: '3px 10px',
       transform: 'rotate(40deg)',
       borderRadius: '5px',
-      width: '200px',
+      width: '170px',
       textAlign: 'center', 
 
     },
