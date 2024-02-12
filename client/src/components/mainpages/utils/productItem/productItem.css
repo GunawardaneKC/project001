@@ -7,7 +7,7 @@
     transform: scale(1.1); /* Increase the scale value for more zoom */
   }
   
-  .hover-zoom:hover img {
+  .hover-card:hover .hover-zoom img {
     transition: transform 0.5s ease-in-out; /* Adjust the duration for a slower zoom */
     transform: scale(1.1); /* Increase the scale value for more zoom */
   }
