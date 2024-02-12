@@ -56,15 +56,15 @@ function ProductItem({ product }) {
                   objectFit: 'cover',
                   transition: 'transform 0.8s ease-in-out',
                 }}
-              >
-                {product.discountprice && (
+              />
+
+            {product.discountprice && (
             <div style={discountRibbonStyles.discountRibbon}>
               <p style={discountRibbonStyles.ribbonText}>
                 {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
               </p>
             </div>
           )}
-                </img>
             </div>
           }
         >
