@@ -45,7 +45,7 @@ function DetailProduct() {
               <span className="text-2xl font-bold " style={{ color: 'black' }}>{detailProduct.title}</span>
             </div>
             {detailProduct.stock && (
-            <div className="mt-2">
+            <div className="mt-1">
               <span className="text-sm font-bold " style={{ color: 'red' }}>{detailProduct.stock}</span>
             </div>
             )}
