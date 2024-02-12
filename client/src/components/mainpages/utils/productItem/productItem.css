@@ -1,14 +1,17 @@
 /* Add this to your global styles or component styles */
 .hover-card {
-    transition: transform 0.5s ease-in-out; /* Adjust the duration for a slower zoom */
-  }
-  
-  .hover-card:hover {
-    transform: scale(1.1); /* Increase the scale value for more zoom */
-  }
-  
-  .hover-card:hover .hover-zoom img {
-    transition: transform 0.5s ease-in-out; /* Adjust the duration for a slower zoom */
-    transform: scale(1.1); /* Increase the scale value for more zoom */
-  }
-  
+  transition: transform 0.5s ease-in-out; /* Adjust the duration for a slower zoom */
+  overflow: hidden; /* Ensure overflow is hidden to prevent the image from overflowing when the card zooms */
+}
+
+.hover-card:hover {
+  transform: scale(1.1); /* Increase the scale value for more zoom */
+}
+
+.hover-card .hover-zoom {
+  transition: transform 0.5s ease-in-out; /* Adjust the duration for a slower zoom */
+}
+
+.hover-card:hover .hover-zoom {
+  transform: scale(1.1); /* Increase the scale value for more zoom */
+}
