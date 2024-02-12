@@ -8,14 +8,16 @@ function ProductItem({ product }) {
   const discountRibbonStyles = {
     discountRibbon: {
       position: 'absolute',
-      top: '30px',
-      right: '-6px',
+      top: '2px',
+      right: '-32px',
       backgroundColor: '#ff9800', // Yellow color
-      padding: '5px 10px',
+      padding: '3px 10px',
       transform: 'rotate(40deg)',
-      borderRadius: '5px', // Rounded corners
-   
+      borderRadius: '5px',
+      width: '200px', 
+
     },
+
     ribbonText: {
       color: 'white',
       fontWeight: 'bold',
