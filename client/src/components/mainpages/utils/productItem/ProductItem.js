@@ -51,8 +51,8 @@ function ProductItem({ product }) {
                   src={product.images.url}
                   className="zoom-image"
                   style={{
-                    width: '240px',
-                    height: '520px',
+                    width: '200px',
+                    height: '240px',
                     objectFit: 'cover',
                   }}
                 />
