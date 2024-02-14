@@ -14,7 +14,7 @@ function App() {
         <div className="">
           <Header />
           <MainPages />
-          <Footer className='mt-5' />
+          <Footer/>
         </div>
       </Router>
       {/* <SupportEngine/> */}

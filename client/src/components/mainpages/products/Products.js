@@ -160,6 +160,7 @@ function Products() {
                     </div>
                        </section>
             <Filters />
+            <div className=' mt-10'></div>
             <motion.div
               variants={fadeIn('left', 0.3)}
               initial="hidden"
@@ -174,6 +175,8 @@ function Products() {
             </motion.div>
             <LoadMore />
             {products.length === 0 && <Loading />} <Snowfall snowflakeCount={100} />
+
+            <div className=' mt-10'></div>
 
             <Imagecontainer />
 
