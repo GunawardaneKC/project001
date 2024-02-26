@@ -22,6 +22,8 @@ function DetailProduct() {
           product.subcategory === foundProduct.subcategory && product._id !== foundProduct._id
       );
       setSubCategoryProducts(relatedProducts);
+
+      window.scrollTo(0, 0);
     }
   }, [params.id, products]);
 
