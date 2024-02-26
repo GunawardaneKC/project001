@@ -17,7 +17,8 @@ function Pages() {
 
     return (
         <Routes>
-            <Route path="/" element={<Maintain/>} />
+            {/* <Route path="/" element={<Maintain/>} /> */}
+            <Route path="/" element={<Products/>} />
             <Route path="/products" element={<Products/>} />
             <Route path="/detail/:id" element={<DetailProduct/>} />
 
