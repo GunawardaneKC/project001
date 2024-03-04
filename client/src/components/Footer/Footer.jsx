@@ -89,7 +89,7 @@ export default function Footer() {
   {/* <!-- Social network icons container --> */}
     <span>Get connected with us : </span>
   <div className="flex mt-5 justify-center">
-    <a className="mr-6 text-neutral-600 dark:text-neutral-200" href='https://bit.ly/49A5Kbu'>
+    <a className="mr-6 text-neutral-600 dark:text-neutral-200" href='https://www.facebook.com/onetel.lk'>
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
       width="32" 
