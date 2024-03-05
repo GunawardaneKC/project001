@@ -52,11 +52,11 @@ function DetailProduct() {
             </div>
             )}
             <div className="mt-2">
-              <span className={detailProduct.discountprice ? " text-lg font-bold" : "text-2xl font-bold"} style={{ color: 'blue' }}>{`Rs: ${Number(detailProduct.price).toLocaleString()}/=`}</span>
+              <span className={detailProduct.discountprice ? " text-sm font-bold" : "text-2xl font-bold"} style={{ color: 'blue' }}>{`Rs: ${Number(detailProduct.price).toLocaleString()}/=`}</span>
             </div>
             {detailProduct.discountprice && (
             <div className="mt-1">
-              <span className="text-sm font-bold " style={{ color: 'red' }}>{`Rs: ${Number(detailProduct.discountprice).toLocaleString()}/=`}</span>
+              <span className="text-2xl font-bold " style={{ color: 'red' }}>{`Rs: ${Number(detailProduct.discountprice).toLocaleString()}/=`}</span>
             </div>
             )}
             <div className="mt-4">
