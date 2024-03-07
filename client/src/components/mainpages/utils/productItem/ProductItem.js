@@ -11,7 +11,7 @@ function ProductItem({ product }) {
       top: '46px',
       right: '-76px',
       backgroundColor: '#ff9800', // Yellow color
-      padding: '3px 10px',
+      // padding: '3px 10px',
       transform: 'rotate(45deg)',
       borderRadius: '5px',
       width: '316px',
@@ -20,9 +20,9 @@ function ProductItem({ product }) {
     },
 
     ribbonText: {
-      color: 'white',
+      color: 'black',
       fontWeight: 'bold',
-      fontSize: '16px',
+      fontSize: '22px',
     }
   };
   
