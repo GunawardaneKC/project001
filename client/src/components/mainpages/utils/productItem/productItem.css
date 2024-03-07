@@ -30,8 +30,15 @@
 
 @media (max-width: 414px) {
   .discountRibbon {
-    top: 50px;
-    right: -70px;
+    top: 54px;
+    right: -96px;
+  }
+}
+
+@media (max-width: 390px) {
+  .discountRibbon {
+    top: 56px;
+    right: -90px;
   }
 }
 
