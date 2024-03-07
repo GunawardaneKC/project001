@@ -40,21 +40,21 @@ function Products() {
     const [loading, setLoading] = useState(false)
     const [filters, setFilters] = useState({});
 
-    useEffect(() => {
-      const savedFilters = localStorage.getItem('filters');
-      if (savedFilters) {
-        setFilters(JSON.parse(savedFilters));
-      }
-    }, []);
+  //   useEffect(() => {
+  //     const savedFilters = localStorage.getItem('filters');
+  //     if (savedFilters) {
+  //       setFilters(JSON.parse(savedFilters));
+  //     }
+  //   }, []);
 
-    useEffect(() => {
-      localStorage.setItem('filters', JSON.stringify(filters));
-    }, [filters]);
+  //   useEffect(() => {
+  //     localStorage.setItem('filters', JSON.stringify(filters));
+  //   }, [filters]);
 
-      const handleCheck = (id) => {
-    // Update filters when checkbox is checked or unchecked
-    setFilters(prevFilters => ({ ...prevFilters, [id]: !prevFilters[id] }));
-  };
+  //     const handleCheck = (id) => {
+  //   // Update filters when checkbox is checked or unchecked
+  //   setFilters(prevFilters => ({ ...prevFilters, [id]: !prevFilters[id] }));
+  // };
 
     const images = [Image, Add1, Add3]; 
 
@@ -65,24 +65,24 @@ function Products() {
     //     setProducts([...products])
     // }
 
-    const deleteProduct = async(id, public_id) => {
-        try {
-            setLoading(true)
-            const destroyImg = axios.post('/api/destroy', {public_id},{
-                headers: {Authorization: token}
-            })
-            const deleteProduct = axios.delete(`/api/products/${id}`, {
-                headers: {Authorization: token}
-            })
+    // const deleteProduct = async(id, public_id) => {
+    //     try {
+    //         setLoading(true)
+    //         const destroyImg = axios.post('/api/destroy', {public_id},{
+    //             headers: {Authorization: token}
+    //         })
+    //         const deleteProduct = axios.delete(`/api/products/${id}`, {
+    //             headers: {Authorization: token}
+    //         })
 
-            await destroyImg
-            await deleteProduct
-            setCallback(!callback)
-            setLoading(false)
-        } catch (err) {
-            alert(err.response.data.msg)
-        }
-    }
+    //         await destroyImg
+    //         await deleteProduct
+    //         setCallback(!callback)
+    //         setLoading(false)
+    //     } catch (err) {
+    //         alert(err.response.data.msg)
+    //     }
+    // }
 
     const slides = [
         {
