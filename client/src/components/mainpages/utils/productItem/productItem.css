@@ -27,3 +27,11 @@
   font-weight: bold;
   font-size: 22px;
 }
+
+@media (max-width: 375px) {
+  .discountRibbon {
+    /* Add your modified styles here */
+    top: 56px;
+    right: -90px;
+  }
+}
