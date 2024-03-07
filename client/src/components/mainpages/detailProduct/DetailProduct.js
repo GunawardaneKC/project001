@@ -82,7 +82,7 @@ function DetailProduct() {
 
       <div className="container">
         <h2 className="text-xl md:text-xl lg:text-xl font-semibold text-black mb-4">Related products</h2>
-        <div className="grid grid-cols-1 sm:flex sm:flex-wrap md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:flex sm:flex-wrap md:grid-cols-3 lg:grid-cols-4 gap-8">
           {subCategoryProducts.map((product) => (
             <ProductItem key={product._id} product={product} />
           ))}
