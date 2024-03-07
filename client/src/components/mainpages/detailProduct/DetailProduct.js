@@ -88,6 +88,17 @@ function DetailProduct() {
           ))}
         </div>
       </div>
+
+      <div>
+      <a href="https://api.whatsapp.com/send? Phone=+94778743175&text=Hi,%20I%20want%20to%20order%20this%20product:%20{{ product.title }}%20%20{{ shop.url }}%2Fproducts%2F{{ product.handle }}" style="text-decoration:none;">
+          <div style="margin-bottom:10px; padding:9px; text-align:center; background-color:#1EA651; height:44px; color:white; border-radius:8px;">
+          <img src="https://cdn.shopify.com/s/files/1/0586/7746/1052/files/whatsapp-icon.avif?v=1699462378" width="25px" style="vertical-align:middle; "/>
+          Order On <span style="font-weight: bold;">WhatsApp</span>
+          </div>
+          </a>
+
+      </div>
+
     </>
   );
 }
