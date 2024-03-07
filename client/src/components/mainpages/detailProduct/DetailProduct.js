@@ -75,12 +75,12 @@ function DetailProduct() {
                   Colours : {detailProduct.colors}
                 </div>
                )}
-              <div>
-                <a href={`https://api.whatsapp.com/send?Phone=+94778743175&text=Hi,%20I%20want%20to%20order%20this%20product:%0A${'Item: ' + detailProduct.title}%0A${'Model: ' + detailProduct.description}%0A${'Price: ' + detailProduct.price}%0A${detailProduct.discountprice ? 'Discount price: ' + detailProduct.discountprice : ''}%0A%0APage URL: ${window.location.href}`} style={{textDecoration: 'none'}}>
-                  <div style={{marginBottom: '10px', padding: '9px', textAlign: 'center', backgroundColor: '#1EA651', height: '44px', width:'250px', color: 'white', borderRadius: '8px'}}>
-                    Order On <span style={{fontWeight: 'bold'}}>WhatsApp</span>
-                    <div className=' ml-0'>
-                    <img src="https://cdn.shopify.com/s/files/1/0586/7746/1052/files/whatsapp-icon.avif?v=1699462378" width="25px" style={{verticalAlign: 'middle'}}/>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <a href={`https://api.whatsapp.com/send?Phone=+94778743175&text=Hi,%20I%20want%20to%20order%20this%20product:%0A${'Item: ' + detailProduct.title}%0A${'Model: ' + detailProduct.description}%0A${'Price: ' + detailProduct.price}%0A${detailProduct.discountprice ? 'Discount price: ' + detailProduct.discountprice : ''}%0A%0APage URL: ${window.location.href}`} style={{ textDecoration: 'none' }}>
+                  <div style={{ marginBottom: '10px', padding: '9px', textAlign: 'center', backgroundColor: '#1EA651', height: '44px', width: '250px', color: 'white', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <span style={{ fontWeight: 'bold' }}>Order On WhatsApp</span>
+                    <div className='ml-0' style={{ marginLeft: '5px' }}>
+                      <img src="https://cdn.shopify.com/s/files/1/0586/7746/1052/files/whatsapp-icon.avif?v=1699462378" width="25px" style={{ verticalAlign: 'middle' }} />
                     </div>
                   </div>
                 </a>
