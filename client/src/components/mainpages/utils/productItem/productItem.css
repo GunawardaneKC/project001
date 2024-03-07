@@ -28,17 +28,17 @@
   font-size: 22px;
 }
 
-@media (max-width: 435px) {
-  .discountRibbon {
-    top: 46px;
-    right: -80px;
-  }
-}
-
 @media (max-width: 414px) {
   .discountRibbon {
     top: 54px;
     right: -96px;
+  }
+}
+
+@media (max-width: 430px) {
+  .discountRibbon {
+    top: 46px;
+    right: -80px;
   }
 }
 
