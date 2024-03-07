@@ -56,7 +56,7 @@ function DetailProduct() {
             </div>
             {detailProduct.discountprice && (
             <div className="mt-1">
-              <span className="text-2xl font-bold " style={{ color: 'red' }}>{`Rs: ${Number(detailProduct.discountprice).toLocaleString()}/=`}</span>
+              <span className="text-2xl font-bold " style={{ color: 'red' }}>{`Special Discount --> Rs: ${Number(detailProduct.discountprice).toLocaleString()}/=`}</span>
             </div>
             )}
             <div className="mt-4">
