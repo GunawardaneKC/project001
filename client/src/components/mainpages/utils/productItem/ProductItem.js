@@ -2,30 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from 'antd';
 
-function ProductItem({ product }) {
-
-  // Internal CSS for the discount ribbon
-  const discountRibbonStyles = {
-    discountRibbon: {
-      position: 'absolute',
-      top: '46px',
-      right: '-76px',
-      backgroundColor: '#ff9800', // Yellow color
-      // padding: '3px 10px',
-      transform: 'rotate(45deg)',
-      borderRadius: '5px',
-      width: '316px',
-      textAlign: 'center', 
-
-    },
-
-    ribbonText: {
-      color: 'black',
-      fontWeight: 'bold',
-      fontSize: '22px',
-    }
-  };
-  
+function ProductItem({ product }) {  
 
   return (
     <div className="m-4">
@@ -71,9 +48,14 @@ function ProductItem({ product }) {
               className="text-center text-xl font-semibold"
               title={product.title}
               description={
-                <span style={{ color: 'blue' }}>
+                <div className="mt-2">
+                <span 
+                  className={product.discountprice ? "text-sm line-through font-bold" : "text-2xl font-bold"} 
+                  style={{ color: 'blue' }}
+                >
                   {`Rs: ${Number(product.price).toLocaleString()}/=`}
                 </span>
+              </div>
               }
             />
 
