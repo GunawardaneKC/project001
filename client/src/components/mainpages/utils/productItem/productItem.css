@@ -28,7 +28,7 @@
   font-size: 22px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 435px) {
   .discountRibbon {
     top: 46px;
     right: -80px;
