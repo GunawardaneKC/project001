@@ -58,31 +58,31 @@ function Products() {
 
     const images = [Image, Add1, Add3]; 
 
-    // const handleCheck = (id) =>{
-    //     products.forEach(product => {
-    //         if(product._id === id) product.checked = !product.checked
-    //     })
-    //     setProducts([...products])
-    // }
+    const handleCheck = (id) =>{
+        products.forEach(product => {
+            if(product._id === id) product.checked = !product.checked
+        })
+        setProducts([...products])
+    }
 
-    // const deleteProduct = async(id, public_id) => {
-    //     try {
-    //         setLoading(true)
-    //         const destroyImg = axios.post('/api/destroy', {public_id},{
-    //             headers: {Authorization: token}
-    //         })
-    //         const deleteProduct = axios.delete(`/api/products/${id}`, {
-    //             headers: {Authorization: token}
-    //         })
+    const deleteProduct = async(id, public_id) => {
+        try {
+            setLoading(true)
+            const destroyImg = axios.post('/api/destroy', {public_id},{
+                headers: {Authorization: token}
+            })
+            const deleteProduct = axios.delete(`/api/products/${id}`, {
+                headers: {Authorization: token}
+            })
 
-    //         await destroyImg
-    //         await deleteProduct
-    //         setCallback(!callback)
-    //         setLoading(false)
-    //     } catch (err) {
-    //         alert(err.response.data.msg)
-    //     }
-    // }
+            await destroyImg
+            await deleteProduct
+            setCallback(!callback)
+            setLoading(false)
+        } catch (err) {
+            alert(err.response.data.msg)
+        }
+    }
 
     const slides = [
         {
