@@ -75,6 +75,14 @@ function DetailProduct() {
                   Colours : {detailProduct.colors}
                 </div>
                )}
+              <div>
+                <a href={`https://api.whatsapp.com/send?Phone=+94778743175&text=Hi,%20I%20want%20to%20order%20this%20product:%0A${detailProduct.title}%0A${detailProduct.description}%0A${detailProduct.price}%0A${detailProduct.discountprice ? 'Discount price: ' + detailProduct.discountprice : ''}`} style={{textDecoration: 'none'}}>
+                  <div style={{marginBottom: '10px', padding: '9px', textAlign: 'center', backgroundColor: '#1EA651', height: '44px', color: 'white', borderRadius: '8px'}}>
+                    <img src="https://cdn.shopify.com/s/files/1/0586/7746/1052/files/whatsapp-icon.avif?v=1699462378" width="25px" style={{verticalAlign: 'middle'}}/>
+                    Order On <span style={{fontWeight: 'bold'}}>WhatsApp</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -89,14 +97,7 @@ function DetailProduct() {
         </div>
       </div>
 
-      <div>
-        <a href={`https://api.whatsapp.com/send?Phone=+94778743175&text=Hi,%20I%20want%20to%20order%20this%20product:%20${detailProduct.title}`} style={{textDecoration: 'none'}}>
-          <div style={{marginBottom: '10px', padding: '9px', textAlign: 'center', backgroundColor: '#1EA651', height: '44px', color: 'white', borderRadius: '8px'}}>
-            <img src="https://cdn.shopify.com/s/files/1/0586/7746/1052/files/whatsapp-icon.avif?v=1699462378" width="25px" style={{verticalAlign: 'middle'}}/>
-            Order On <span style={{fontWeight: 'bold'}}>WhatsApp</span>
-          </div>
-        </a>
-      </div>
+      
 
     </>
   );
