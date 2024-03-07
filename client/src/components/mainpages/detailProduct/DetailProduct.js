@@ -78,7 +78,7 @@ function DetailProduct() {
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <a href={'https://wa.me/94770110001'}>
                   <div style={{ marginBottom: '10px', padding: '9px', textAlign: 'center', backgroundColor: '#1EA651', height: '44px', width: '250px', color: 'white', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <span style={{ fontWeight: 'bold' }}>Order On WhatsApp</span>
+                    <span style={{ fontWeight: 'bold' }}>Order On WhatsAppppp</span>
                     <div className='ml-0' style={{ marginLeft: '5px' }}>
                       <img src="https://cdn.shopify.com/s/files/1/0586/7746/1052/files/whatsapp-icon.avif?v=1699462378" width="25px" style={{ verticalAlign: 'middle' }} />
                     </div>
