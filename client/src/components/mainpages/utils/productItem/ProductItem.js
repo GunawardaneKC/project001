@@ -57,13 +57,11 @@ function ProductItem({ product }) {
                   }}
                 />
 
-                {product.discountprice && (
-                  <div style={discountRibbonStyles.discountRibbon}>
-                    <p style={discountRibbonStyles.ribbonText}>
-                      {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
-                    </p>
-                  </div>
-                )}
+                <div className="discountRibbon">
+                  <p className='ribbonText'>
+                    {`Rs ${Number(product.discountprice).toLocaleString()} /=`}
+                  </p>
+                </div>
               </div>
             }
           >

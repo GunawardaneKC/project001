@@ -10,3 +10,20 @@
 .hover-card-container .hover-zoom img {
   transition: transform 0.5s ease-in-out; /* Adjust the duration for a slower zoom */
 }
+
+.discountRibbon {
+  position: absolute;
+  top: 46px;
+  right: -76px;
+  background-color: #ff9800;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  width: 316px;
+  text-align: center;
+}
+
+.ribbonText {
+  color: 'black';
+  font-weight: bold;
+  font-size: 22px;
+}
