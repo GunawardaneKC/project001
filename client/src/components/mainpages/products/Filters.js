@@ -30,6 +30,11 @@ function Filters() {
     }
   }, [category, categories, subcategory]);
 
+  useEffect(() => {
+    // Save condition filter to localStorage whenever it changes
+    localStorage.setItem('condition', condition);
+  }, [condition]);
+
   const handleCategory = (e) => {
     const selectedCategory = e.target.value;
     setCategory(selectedCategory);
