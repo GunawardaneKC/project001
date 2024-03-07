@@ -28,14 +28,14 @@
   font-size: 22px;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 414px) {
   .discountRibbon {
     top: 50px;
     right: -70px;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .discountRibbon {
     top: 56px;
     right: -90px;
