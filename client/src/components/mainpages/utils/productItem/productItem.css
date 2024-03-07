@@ -35,3 +35,11 @@
     right: -90px;
   }
 }
+
+@media (max-width: 414px) {
+  .discountRibbon {
+    /* Add your modified styles here */
+    top: 50px;
+    right: -70px;
+  }
+}
