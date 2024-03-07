@@ -38,15 +38,32 @@ function Products() {
     const [token] = state.token
     const [callback, setCallback] = state.productsAPI.callback
     const [loading, setLoading] = useState(false)
+    const [filters, setFilters] = useState({});
+
+    useEffect(() => {
+      const savedFilters = localStorage.getItem('filters');
+      if (savedFilters) {
+        setFilters(JSON.parse(savedFilters));
+      }
+    }, []);
+
+    useEffect(() => {
+      localStorage.setItem('filters', JSON.stringify(filters));
+    }, [filters]);
+
+      const handleCheck = (id) => {
+    // Update filters when checkbox is checked or unchecked
+    setFilters(prevFilters => ({ ...prevFilters, [id]: !prevFilters[id] }));
+  };
 
     const images = [Image, Add1, Add3]; 
 
-    const handleCheck = (id) =>{
-        products.forEach(product => {
-            if(product._id === id) product.checked = !product.checked
-        })
-        setProducts([...products])
-    }
+    // const handleCheck = (id) =>{
+    //     products.forEach(product => {
+    //         if(product._id === id) product.checked = !product.checked
+    //     })
+    //     setProducts([...products])
+    // }
 
     const deleteProduct = async(id, public_id) => {
         try {
